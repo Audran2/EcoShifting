@@ -1,0 +1,50 @@
+footer{
+    background-color: $colortext;
+    margin-top: 200px;
+    height: 250px;
+    .container-footer{ 
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        h5{
+            font-size: 30px;
+            font-family: $primary-font;
+            margin-left: 10%;
+            color: $background;
+            margin-top: 95px;
+        }
+        .bar{
+            position: absolute;
+            left: 50%;
+            margin-top: 62.5px;
+            width: 4px;
+            height: 125px;
+            background-color: $background;
+        }
+        .mefo{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 70px;
+            margin-right: 10%;
+            ul{
+                text-align: center;
+                padding-right: 20px;
+                li{
+                    font-family: $secondary-font;
+                    font-size: 20px;
+                    list-style: none;
+                    margin-bottom: 50px;
+                    a{
+                        color: $background;
+                    }
+                }
+            }
+        }
+    }
+    .right{
+        p{
+            text-align: center;
+            color: $background;
+        }
+    }
+}

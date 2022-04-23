@@ -1,0 +1,36 @@
+nav{        
+    padding: 15px 0;
+    background-color: transparent;
+    .container-nav{        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 20px;
+        .logo{           
+            display: flex;
+            align-items: center;
+            width: 400px;
+            font-family: $primary-font; 
+            font-size: 25px;    
+            h2{
+                padding-left: 5%;
+            }
+        }
+        .menu{         
+            ul{
+                display: flex;
+                li{
+                    list-style: none;
+                    margin: 0 10px;
+                    a{
+                        width: 100%;
+                        display: block;
+                        padding: 10px 0;
+                        font-family: $secondary-font;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
