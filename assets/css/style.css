@@ -62,6 +62,7 @@ header .presentation .text h2 {
 }
 header .presentation .text p {
   font-family: "Poppins", sans-serif;
+  text-align: justify;
   padding-top: 15px;
   font-size: 20px;
 }
@@ -261,6 +262,7 @@ header .duo .text h2 {
 }
 header .duo .text p {
   font-family: "Poppins", sans-serif;
+  text-align: justify;
   padding-top: 15px;
   font-size: 20px;
 }
@@ -298,6 +300,7 @@ header .whytelework .text h2 {
 }
 header .whytelework .text p {
   font-family: "Poppins", sans-serif;
+  text-align: justify;
   padding-top: 15px;
   font-size: 20px;
 }
@@ -518,7 +521,9 @@ header button:focus {
 }
 .container-home .section-calculator .left p {
   font-family: "Poppins", sans-serif;
-  margin-bottom: 20px;
+  text-align: justify;
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 .container-home .section-calculator .left button {
   padding: 20px;
@@ -564,6 +569,7 @@ header button:focus {
 }
 .container-home .section-telework .right div p {
   font-family: "Poppins", sans-serif;
+  text-align: justify;
   font-size: 30px;
   margin-left: 20px;
 }
@@ -646,6 +652,7 @@ header button:focus {
 .container-home section p {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
+  text-align: justify;
 }
 .container-home section button {
   padding: 20px;

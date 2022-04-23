@@ -62,6 +62,7 @@ header{
             }
             p{
                 font-family: $secondary-font;
+                text-align: justify;
                 padding-top: 15px;
                 font-size: 20px;
             }
@@ -272,6 +273,7 @@ header{
             }
             p{
                 font-family: $secondary-font;
+                text-align: justify;
                 padding-top: 15px;
                 font-size: 20px;
             }
@@ -309,6 +311,7 @@ header{
             }
             p{
                 font-family: $secondary-font;
+                text-align: justify;
                 padding-top: 15px;
                 font-size: 20px;
             }
@@ -548,7 +551,9 @@ header{
             }
             p{
                 font-family: $secondary-font;
-                margin-bottom: 20px;
+                text-align: justify;
+                font-size: 18px;
+                margin-bottom: 5px;
             }
             button{
                 padding: 20px;
@@ -599,6 +604,7 @@ header{
                 display: flex;
                 p{
                     font-family: $secondary-font;
+                    text-align: justify;
                     font-size: 30px;
                     margin-left: 20px;
                 }
@@ -687,6 +693,7 @@ header{
         p{
             font-family: $secondary-font;
             font-size: 20px;
+            text-align: justify;
         }
         button{
             padding: 20px;
