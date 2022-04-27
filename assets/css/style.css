@@ -956,6 +956,9 @@ body .formCalc form {
       font-size: 30px;
       line-height: 35px; }
     body .formCalc form .form-group input {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
       width: 800px;
       height: 80px;
       background: #EBFFFF;
