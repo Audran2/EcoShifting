@@ -10,50 +10,54 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Akshar:wght@500&display=swap" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body>	
-	<nav>
-		<div id="nav-placeholder">
-
-        </div>
-        
-        <script>
-        $(function(){
-        $("#nav-placeholder").load("nav.html");
-        });
-        </script> 
-	</nav>
-	<header>
-        <div class="title">
-            <h1>Footprint calculator</h1>
-            <div class="drops">
-                <div class="decoration decoration-1"></div>
-                <div class="decoration decoration-2"></div>
-                <div class="decoration decoration-3"></div>
-                <div class="decoration decoration-4"></div>
-            </div>
-        </div>
-		<div class="container-CO2">
-		
-			<CO2form>
-				<input type="adress" placeholder="Start adress" required><br>
-				<input type="adress" placeholder="End adress" required><br>
-				<input type="button" value="Test my carbon footprint"><br>
-			</CO2form>
-
+<body>
+<nav>
+	<div id="nav-placeholder"></div>
+	<script>$(function(){$("#nav-placeholder").load("nav.html");});</script>
+</nav>
+<header>
+	<div class="title">
+		<h1>Footprint calculator</h1>
+		<div class="drops">
+			<div class="contact contact-1"></div>
+			<div class="contact contact-2"></div>
+			<div class="contact contact-3"></div>
+			<div class="contact contact-4"></div>
 		</div>
-	</header>
-	<footer> 
-		<div id="footer-placeholder">
-
+	</div>
+</header>
+<div class="formCalc">
+	<form>
+		<div class="form-group">
+			<label for="input-start">START ADDRESS</label><br>
+			<input class="inputStarAddress" id="input-start" type="address" required>
 		</div>
-		
-		<script>
+		<div class="form-group">
+			<label for="input-end">END ADDRESS</label><br>
+			<input class="inputStarAddress" id="input-end" type="address" required>
+		</div>
+
+		<div class="form-group">
+			<label for="input-vehicle">END ADDRESS</label><br>
+			<input class="inputStarAddress" id="input-vehicle" type="text" required>
+		</div>
+		<div class="submit">
+			<input type="submit" value="Submit">
+		</div>
+	</form>
+</div>
+<footer>
+	<div id="footer-placeholder">
+
+	</div>
+
+	<script>
 		$(function(){
-		$("#footer-placeholder").load("footer.html");
+			$("#footer-placeholder").load("footer.html");
 		});
-		</script> 
-	</footer> 
+	</script>
+</footer>
 </body>
 </html>
