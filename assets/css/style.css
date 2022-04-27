@@ -90,8 +90,13 @@ header .container-home .section-calculator .left .button {
   }
 }
 header .container-home .section-calculator .right img {
-  width: 100%;
-  height: 100%;
+  width: 600px;
+}
+@media (max-width: 600px) {
+  header .container-home .section-calculator .right img {
+    width: 100%;
+    height: 100%;
+  }
 }
 header .container-home .section-telework {
   margin-top: 380px;
@@ -406,14 +411,14 @@ header .container-telework .drop-4 {
   background-color: #2C6330;
   height: 120px;
   width: 120px;
-  bottom: -550px;
+  bottom: -750px;
   left: 850px;
 }
 header .container-telework .drop-5 {
   background-color: #7EC885;
   height: 50px;
   width: 50px;
-  bottom: -450px;
+  bottom: -600px;
   left: 1100px;
 }
 header .container-telework .drop-6 {
