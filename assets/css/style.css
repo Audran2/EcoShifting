@@ -967,13 +967,14 @@ body .title .decoration-4 {
 body .button {
   display: flex;
   justify-content: center;
-  background: transparent;
+  background: #EBFFF8;
   border: 2px solid #C072BB;
   border-radius: 5000px;
   vertical-align: middle;
   text-transform: uppercase;
   text-decoration: none;
   font-family: "Akshar", sans-serif;
+  overflow: hidden;
 }
 
 h1 {
@@ -1056,62 +1057,63 @@ nav .nav {
   background-color: transparent;
   position: relative;
 }
-nav .nav > .nav-header {
+nav .nav .nav-header {
   display: inline;
 }
-nav .nav > .nav-header > .nav-title {
+nav .nav .nav-header .nav-title {
   display: inline-block;
   font-size: 35px;
   font-family: "Akshar", sans-serif;
   color: #121619;
   padding: 10px;
 }
-nav .nav > .nav-btn {
+nav .nav .nav-btn {
   display: none;
 }
-nav .nav > .nav-links {
+nav .nav .nav-links {
   display: inline;
   float: right;
   font-size: 18px;
 }
-nav .nav > .nav-links > a {
+nav .nav a {
   display: inline-block;
   padding: 13px 10px 0 10px;
   text-decoration: none;
   color: #121619;
   font-family: "Poppins", sans-serif;
 }
-nav .nav > .nav-links > a:hover {
+nav .nav a:hover {
   border-bottom: #C072BB 3px solid;
 }
-nav .nav > #nav-check {
+nav .nav #nav-check {
   display: none;
 }
+nav .nav .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 @media (max-width: 600px) {
-  nav .nav > .nav-btn {
+  nav .nav .nav-btn {
     display: inline-block;
     position: absolute;
     right: 0px;
     top: 0px;
   }
-  nav .nav > .nav-btn > label {
+  nav .nav .nav-btn label {
     display: inline-block;
     width: 50px;
     height: 50px;
     padding: 13px;
   }
-  nav .nav > .nav-btn > label:hover, nav .nav #nav-check:checked ~ .nav-btn > label {
-    background-color: transparent;
-    z-index: 1;
-  }
-  nav .nav > .nav-btn > label > span {
+  nav .nav .nav-btn label span {
     z-index: 1;
     display: block;
     width: 35px;
     height: 8px;
     border-top: 5px solid #121619;
   }
-  nav .nav > .nav-links {
+  nav .nav .nav-links {
     text-align: center;
     position: absolute;
     display: block;
@@ -1124,9 +1126,13 @@ nav .nav > #nav-check {
     left: 0px;
     right: 0px;
   }
-  nav .nav > .nav-links > a {
+  nav .nav .nav-links a {
     display: block;
     width: 100%;
+  }
+  nav .nav > .nav-btn > label:hover, nav .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: transparent;
+    z-index: 1;
   }
   nav .nav > #nav-check:not(:checked) ~ .nav-links {
     height: 0px;

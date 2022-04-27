@@ -92,13 +92,14 @@ body {
     .button{  
         display: flex;      
         justify-content:center;        
-        background: transparent;
+        background: $background;
         border: $border;
         border-radius: 5000px;
         vertical-align: middle;
         text-transform: uppercase;      
         text-decoration: none;
         font-family: $primary-font; 
+        overflow: hidden;
     }
 }
 
