@@ -89,18 +89,32 @@ body {
         }
     }
 
+<<<<<<< HEAD
     .button{  
         display: flex;      
         justify-content:center;        
         background: $background;
+=======
+    .button{ 
+        display: flex; 
+        justify-content: center;
+        background: transparent;
+>>>>>>> 2d9f8d4a832c57340e1bd1660d7e5bf7cb0ae17d
         border: $border;
         border-radius: 5000px;
         vertical-align: middle;
         text-transform: uppercase;      
         text-decoration: none;
+<<<<<<< HEAD
         font-family: $primary-font; 
         overflow: hidden;
+=======
+        font-family: $primary-font;
+>>>>>>> 2d9f8d4a832c57340e1bd1660d7e5bf7cb0ae17d
     }
+    .button:hover{
+        background-color: $decolor;
+    } 
 }
 
 h1{
