@@ -256,53 +256,6 @@ header{
         }
     }
 
-    //Footprint calculator page//
-    .container-CO2 {
-        display: flex;
-        margin: 100px 420px;
-        top: 50%;
-        left: 50%;
-        CO2form {
-            border: $border;
-            background: $white;
-            padding: 3em;
-            height: 320px;
-            width: 400px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-            text-align: center;
-            position: relative;
-            p {
-                font-weight: 500;
-                color: $colortext;
-                opacity: 0.7;
-                font-size: 1.4rem;
-                margin-top: 0;
-                margin-bottom: 60px;
-            }
-            a {
-                text-decoration: none;
-                color: $colortext;
-                font-size: 12px;
-            }
-            input {
-                background: transparent;
-                width: 300px;
-                margin: 2em 0em;
-                padding: 1em;
-                margin-bottom: 2em;
-                border: $border;
-                border-radius: 5000px;
-                backdrop-filter: blur(5px);
-                box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
-                color: $colortext;
-                font-family: $secondary-font;
-                font-weight: 500;
-            }        
-        }
-    }
-
     //Telework page//
     .container-telework{
         .whytelework{
