@@ -975,6 +975,9 @@ body .button {
   text-decoration: none;
   font-family: "Akshar", sans-serif;
 }
+body .button:hover {
+  background-color: #C072BB;
+}
 
 h1 {
   margin-top: 180px;

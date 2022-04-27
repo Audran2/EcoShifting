@@ -89,17 +89,20 @@ body {
         }
     }
 
-    .button{  
-        display: flex;      
-        justify-content:center;        
+    .button{ 
+        display: flex; 
+        justify-content: center;
         background: transparent;
         border: $border;
         border-radius: 5000px;
         vertical-align: middle;
         text-transform: uppercase;      
         text-decoration: none;
-        font-family: $primary-font; 
+        font-family: $primary-font;
     }
+    .button:hover{
+        background-color: $decolor;
+    } 
 }
 
 h1{
