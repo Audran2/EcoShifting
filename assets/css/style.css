@@ -771,11 +771,21 @@ header .container-contact .duo .text p {
     padding-bottom: 20px;
   }
 }
-header .container-contact .duo .text .button {
+header .container-contact .duo .text .twobutton {
+  display: flex;
+}
+@media (max-width: 600px) {
+  header .container-contact .duo .text .twobutton {
+    flex-wrap: wrap;
+  }
+}
+header .container-contact .duo .text .twobutton .button {
+  margin-top: 40px;
+  margin-left: 20px;
   padding: 15px 45px;
 }
 @media (max-width: 600px) {
-  header .container-contact .duo .text .button {
+  header .container-contact .duo .text .twobutton .button {
     width: 200px;
   }
 }
@@ -1048,6 +1058,30 @@ p {
   color: #121619;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
+}
+
+.teleworkco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1400px;
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .teleworkco {
+    width: 300px;
+  }
+}
+.teleworkco h2 {
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+.teleworkco p {
+  padding-bottom: 50px;
+}
+.teleworkco .button {
+  padding: 20px;
+  width: 200px;
 }
 
 nav {
