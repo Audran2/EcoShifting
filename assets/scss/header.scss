@@ -742,12 +742,21 @@ header{
                         padding-bottom: 20px;
                     }
                 }
-                .button{
-                    padding: 15px 45px;
+                .twobutton{
+                    display: flex;
                     @include for-mobile{
-                        width: 200px;
+                        flex-wrap: wrap;
+                    }
+                    .button{
+                        margin-top: 40px;
+                        margin-left: 20px;
+                        padding: 15px 45px;
+                        @include for-mobile{
+                            width: 200px;
+                        }
                     }
                 }
+
             }
         }
     }
