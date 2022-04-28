@@ -34,10 +34,6 @@ ScrollReveal().reveal('.teammember', {
   origin: 'top', delay: 200, duration: 1000, distance: '100px'
 });
 
-ScrollReveal().reveal('.duo .container', {
-  origin: 'left', delay: 200, duration: 1000, distance: '100px'
-});
-
 ScrollReveal().reveal('.duo .text', {
   origin: 'right', delay: 200, duration: 1000, distance: '100px'
 });
