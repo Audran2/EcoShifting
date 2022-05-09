@@ -170,7 +170,7 @@ header{
                     top: 40%;
                     color: $background;
                     @include for-mobile{
-                        left: 40%;
+                        left: 37%;
                     }
                     p {
                         color: $background;
@@ -191,7 +191,7 @@ header{
                         width: 200px;
                         height: 100px;
                         top: 240%;
-                        left: 23.5%;
+                        left: 17%;
                     }
                     p {
                         color: $background;
@@ -212,7 +212,7 @@ header{
                         width: 200px;
                         height: 100px;
                         top: 500%;
-                        left: 23.5%;
+                        left: 17%;
                     }
                     p {
                         color: $background;
@@ -253,6 +253,71 @@ header{
                     margin-top: 50px;
                 }
             }
+        }
+    }
+
+    //CO2FP page//
+    .formCalc {
+        margin-top: 100px;
+        form {
+          text-align: center;
+          .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 150px;
+            width: 100%;
+            @include for-mobile{
+              margin-bottom: 70px;
+            }
+            label {
+              font-family: $primary-font;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 50px;
+              @include for-mobile{
+                font-size: 40px;
+              }
+            }
+            input {
+              margin: 0 auto;
+              font-family: $secondary-font;
+              font-style: 20px;
+              width: 500px;
+              height: 40px;
+              background-color: transparent;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+              border-radius: 45px;
+              border: $border;
+              outline: none;
+              @include for-mobile{
+                width: 100%;
+                height: 30px;
+              }
+            }
+          }
+          .submit {
+            input {
+              width: 200px;
+              height: 40px;
+              background: transparent;
+              border-radius: 45px;
+              cursor: pointer;
+              border: $border;
+              font-family: $secondary-font;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 25px;
+              color: $colortext;
+              @include for-mobile{
+                width: 200px;
+                height: 30px;
+                font-size: 15px;
+              }
+            }
+            input:hover {
+              background-color: $decolor;
+            }
+          }
         }
     }
 
@@ -546,6 +611,7 @@ header{
                     height: 180px;
                     width: 350px;
                     @include for-mobile{
+                        padding-top: 30px;
                         padding-bottom: 50px;
                     }
                     img{
@@ -566,6 +632,9 @@ header{
                     border-radius: 40px;
                     height: 180px;
                     width: 350px;
+                    @include for-mobile{
+                        padding-top: 65px;
+                    }
                     img{
                         width: 150px;
                         height: 170px;
@@ -592,7 +661,7 @@ header{
                 left: 50%;
                 @include for-mobile{
                     padding-top: 40px;
-                    transform: translate(7%,0%);
+                    transform: translate(2%,0%);
                     top: 50%;
                     left: 50%;
                 }
@@ -601,7 +670,7 @@ header{
                 border: $border;
                 background: $white;
                 padding: 3em;
-                height: 320px;
+                height: 390px;
                 border-radius: 20px;
                 backdrop-filter: blur(10px);
                 box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
@@ -746,13 +815,15 @@ header{
                     display: flex;
                     @include for-mobile{
                         flex-wrap: wrap;
+                        justify-content: center;
+                        margin-right: 25px;
                     }
                     .button{
                         margin-top: 40px;
                         margin-left: 20px;
                         padding: 15px 45px;
                         @include for-mobile{
-                            width: 200px;
+                            width: 250px;
                         }
                     }
                 }

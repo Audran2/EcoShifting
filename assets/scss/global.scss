@@ -1,4 +1,5 @@
 *{
+    box-sizing: border-box;
     text-decoration: none;
     color: $colortext;
     margin: 0px;
@@ -66,7 +67,7 @@ body {
                     height: 90px;
                     width: 80px;
                     top: 30px;
-                    left: 320px;
+                    left: 266px;
                     border-radius: 7px 0 0 7px;
                 }
             }
@@ -168,21 +169,24 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1400px;
+    width: 100%;
     margin: 0 auto;
-    @include for-mobile{
-        width: 300px;
-    }
     h2{
       padding-top: 150px;
       padding-bottom: 50px;
+      text-align: center;
+      @include for-mobile{
+          text-align: center;
+          padding-bottom: 20px;
+      }
       
     }
     p{    
       padding-bottom: 50px;
+      text-align: center;
     }
     .button{
-      padding: 20px;
+      padding: 15px;
       width: 200px;
     }
     

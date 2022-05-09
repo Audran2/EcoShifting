@@ -175,7 +175,7 @@ header .container-home .section-telework .left .carre-un {
 }
 @media (max-width: 600px) {
   header .container-home .section-telework .left .carre-un {
-    left: 40%;
+    left: 37%;
   }
 }
 header .container-home .section-telework .left .carre-un p {
@@ -198,7 +198,7 @@ header .container-home .section-telework .left .carre-deux {
     width: 200px;
     height: 100px;
     top: 240%;
-    left: 23.5%;
+    left: 17%;
   }
 }
 header .container-home .section-telework .left .carre-deux p {
@@ -220,7 +220,7 @@ header .container-home .section-telework .left .carre-trois {
     width: 200px;
     height: 100px;
     top: 500%;
-    left: 23.5%;
+    left: 17%;
   }
 }
 header .container-home .section-telework .left .carre-trois p {
@@ -262,6 +262,75 @@ header .container-home section .button {
   header .container-home section .button {
     margin-top: 50px;
   }
+}
+header .formCalc {
+  margin-top: 100px;
+}
+header .formCalc form {
+  text-align: center;
+}
+header .formCalc form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 150px;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  header .formCalc form .form-group {
+    margin-bottom: 70px;
+  }
+}
+header .formCalc form .form-group label {
+  font-family: "Akshar", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+}
+@media (max-width: 600px) {
+  header .formCalc form .form-group label {
+    font-size: 40px;
+  }
+}
+header .formCalc form .form-group input {
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  font-style: 20px;
+  width: 500px;
+  height: 40px;
+  background-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 45px;
+  border: 2px solid #C072BB;
+  outline: none;
+}
+@media (max-width: 600px) {
+  header .formCalc form .form-group input {
+    width: 100%;
+    height: 30px;
+  }
+}
+header .formCalc form .submit input {
+  width: 200px;
+  height: 40px;
+  background: transparent;
+  border-radius: 45px;
+  cursor: pointer;
+  border: 2px solid #C072BB;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  color: #121619;
+}
+@media (max-width: 600px) {
+  header .formCalc form .submit input {
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+  }
+}
+header .formCalc form .submit input:hover {
+  background-color: #C072BB;
 }
 header .container-telework .whytelework {
   padding-top: 50px;
@@ -571,6 +640,7 @@ header .container-contact .teammember .triple .second {
 }
 @media (max-width: 600px) {
   header .container-contact .teammember .triple .second {
+    padding-top: 30px;
     padding-bottom: 50px;
   }
 }
@@ -591,6 +661,11 @@ header .container-contact .teammember .triple .third {
   border-radius: 40px;
   height: 180px;
   width: 350px;
+}
+@media (max-width: 600px) {
+  header .container-contact .teammember .triple .third {
+    padding-top: 65px;
+  }
 }
 header .container-contact .teammember .triple .third img {
   width: 150px;
@@ -620,7 +695,7 @@ header .container-contact .duo .container {
 @media (max-width: 600px) {
   header .container-contact .duo .container {
     padding-top: 40px;
-    transform: translate(7%, 0%);
+    transform: translate(2%, 0%);
     top: 50%;
     left: 50%;
   }
@@ -629,7 +704,7 @@ header .container-contact .duo contactform {
   border: 2px solid #C072BB;
   background: rgba(255, 255, 255, 0.3);
   padding: 3em;
-  height: 320px;
+  height: 390px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
@@ -777,6 +852,8 @@ header .container-contact .duo .text .twobutton {
 @media (max-width: 600px) {
   header .container-contact .duo .text .twobutton {
     flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 25px;
   }
 }
 header .container-contact .duo .text .twobutton .button {
@@ -786,7 +863,7 @@ header .container-contact .duo .text .twobutton .button {
 }
 @media (max-width: 600px) {
   header .container-contact .duo .text .twobutton .button {
-    width: 200px;
+    width: 250px;
   }
 }
 
@@ -836,7 +913,7 @@ footer .container-footer .mefo {
   footer .container-footer .mefo {
     margin-top: 50px;
     left: 30px;
-    padding-right: 30px;
+    padding-right: 5px;
   }
 }
 footer .container-footer .mefo ul {
@@ -877,6 +954,7 @@ footer .right p {
 }
 
 * {
+  box-sizing: border-box;
   text-decoration: none;
   color: #121619;
   margin: 0px;
@@ -953,7 +1031,7 @@ body .title .decoration-3 {
     height: 90px;
     width: 80px;
     top: 30px;
-    left: 320px;
+    left: 266px;
     border-radius: 7px 0 0 7px;
   }
 }
@@ -1064,23 +1142,26 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1400px;
+  width: 100%;
   margin: 0 auto;
-}
-@media (max-width: 600px) {
-  .teleworkco {
-    width: 300px;
-  }
 }
 .teleworkco h2 {
   padding-top: 150px;
   padding-bottom: 50px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .teleworkco h2 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
 }
 .teleworkco p {
   padding-bottom: 50px;
+  text-align: center;
 }
 .teleworkco .button {
-  padding: 20px;
+  padding: 15px;
   width: 200px;
 }
 
@@ -1134,11 +1215,11 @@ nav .nav #nav-check {
     position: absolute;
     right: 0px;
     top: 0px;
+    padding-top: 20px;
   }
   nav .nav .nav-btn label {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    height: 60px;
     padding: 13px;
   }
   nav .nav .nav-btn label span {
@@ -1176,48 +1257,6 @@ nav .nav #nav-check {
     height: max-content;
     overflow-y: auto;
   }
-}
-
-body .formCalc form {
-  text-align: center;
-}
-body .formCalc form .submit input {
-  width: 240px;
-  height: 59px;
-  background: #C072BB;
-  border-radius: 80px;
-  cursor: pointer;
-  border: none;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 35px;
-  color: #161219;
-}
-body .formCalc form .form-group {
-  margin-bottom: 150px;
-  display: block;
-  width: 100%;
-}
-body .formCalc form .form-group label {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 35px;
-}
-body .formCalc form .form-group input {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  width: 800px;
-  height: 80px;
-  background: #EBFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 45px;
-  border: none;
-  outline: none;
 }
 
 /*# sourceMappingURL=style.css.map */

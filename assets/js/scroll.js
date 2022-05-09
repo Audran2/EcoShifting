@@ -2,9 +2,6 @@ ScrollReveal().reveal('h1', {
   origin: 'bottom', delay: 200, duration: 1000, distance: '100px'
 });
 
-ScrollReveal().reveal('.container', {
-  origin: 'bottom', delay: 200, duration: 1000, distance: '100px'
-});
 
 ScrollReveal().reveal('.section-calculator', {
   origin: 'left', delay: 200, duration: 1000, distance: '100px'
