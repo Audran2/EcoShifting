@@ -657,28 +657,27 @@ header{
             .container {
                 display: flex;
                 transform: translate(+30%,0%);
-                top: 50%;
-                left: 50%;
                 @include for-mobile{
                     padding-top: 40px;
-                    transform: translate(2%,0%);
+                    transform: translate(-0.5%,0%);
                     top: 50%;
                     left: 50%;
                 }
             }
-            contactform {
+            #contactus {
                 border: $border;
                 background: $white;
-                padding: 3em;
-                height: 390px;
+                padding: 2em;
+                width: 380px;
+                height: 480px;
                 border-radius: 20px;
                 backdrop-filter: blur(10px);
                 box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
                 text-align: center;
                 position: relative;
-                transition: all 0.2s ease-in-out;
                 @include for-mobile{
                     backdrop-filter: none;
+                    width: 317px;
                 }
                 p {
                     font-weight: 500;
@@ -693,56 +692,79 @@ header{
                     color: $colortext;
                     font-size: 12px;
                 }
-                input {
-                    background: transparent;
-                    margin-bottom: 2em;
-                    border: $border;
-                    border-radius: 5000px;
-                    backdrop-filter: blur(5px);
-                    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
-                    color: $colortext;
-                    font-family: $secondary-font;
-                    font-weight: 500;
-                    transition: all 0.2s ease-in-out;
-                    text-align: center;
-                    @include for-mobile{
-                        backdrop-filter: none;
-                    }
-                    &:hover {
-                        background: rgba(255,255,255,0.1);
-                        box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+                .field{
+                    height: 100px;
+                    input {
+                        background: transparent;
+                        border: $border;
+                        border-radius: 5000px;
+                        backdrop-filter: blur(5px);
+                        box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+                        color: $colortext;
+                        font-family: $secondary-font;
+                        font-weight: 500;
+                        text-align: center;
+                        @include for-mobile{
+                            backdrop-filter: none;
                         }
-                        
-                        &[type="fname"],
-                        &[type="name"],
-                        &[type="email"],
-                        &[type="tel"] {
-                            width: 200px;
+                        &:hover {
+                            background: rgba(255,255,255,0.1);
+                            box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+                        }
+                            
+                        &[type="text"] {
+                            width: 280px;
                             padding: 0.7em;
                             &:focus {
                                 background: rgba(255,255,255,0.1);
                                 box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
                             }
+                            @include for-mobile{
+                                width: 230px;
+                            }
                         }
-                        &[type="button"] {
-                            margin-top: 5px;
-                            padding: 0.5em;
-                            width: 85px;
+                        &[type="submit"] {
+                            padding: 0.2em;
+                            width: 120px;
                             font-size: 0.8rem;
                             
                             &:hover {
                                 cursor: pointer;
                             }
-                            
-                            &:active {
-                                background: rgba(255,255,255,0.2);
-                            }
                         }
                     }
-                    &:hover {
-                        margin: 4px;
+                    small {
+                        color: #dc3545;
                     }
                 }
+
+            
+
+
+                input.error,
+                textarea.error,
+                select.error {
+                    border-color: #dc3545;
+                }
+
+                input.error:focus,
+                textarea.error:focus,
+                select.error:focus {
+                    box-shadow: 0 0 0 0.25rem rgb(220 53 69 / 25%);
+                }
+
+
+                input.success,
+                textarea.success,
+                select.success {
+                    border-color: #198754;
+                }
+
+                input.success:focus,
+                textarea.success:focus {
+                    box-shadow: 0 0 0 0.25rem rgb(25 135 84 / 25%);
+                }
+            }
                 ::placeholder {
                     font-family: $secondary-font;
                     font-weight: 400;
@@ -753,7 +775,7 @@ header{
                     border-radius: 20px;
                     box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
                     position: absolute;
-                    transition: all 0.2s ease;
+                    
                     @include for-mobile{
                         display: none;
                         backdrop-filter: none;

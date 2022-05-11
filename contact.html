@@ -71,13 +71,31 @@
             </div>
             <div class="duo"> 
                 <div class="container">
-                    <contactform>
-                        <input type="fname" placeholder="First name" required><br>
-                        <input type="name" placeholder="Name" required><br>
-                        <input type="email" placeholder="Email" required><br>
-                        <input type="tel" placeholder="Phone number" required><br>
-                        <input type="button" value="Send"><br>
-                    </contactform>
+                    <form id="contactus">
+                        <div class="field">
+                            <label for="name">First name:</label>
+                            <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+                            <small></small>
+                        </div>
+                        <div class="field">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name">
+                            <small></small>
+                        </div>
+                        <div class="field">
+                            <label for="name">Email adress:</label>
+                            <input type="text" id="email" name="email"placeholder="Enter your email address">
+                            <small></small>
+                        </div>
+                        <div class="field">
+                            <label for="name">Phone number:</label>
+                            <input type="text" id="tel" name="tel" placeholder="Enter your phone number">
+                            <small></small>
+                        </div>
+                        <div class="field">
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
                 
                     <div class="dropsform">
                     <div class="dropform dropform-1"></div>
@@ -114,5 +132,6 @@
     </footer>
 <script src="assets/js/scroll.js"></script>
 <script src="assets\js\utils.js"></script>
+<script src="assets/js/submit.js"></script>
 </body>
 </html>

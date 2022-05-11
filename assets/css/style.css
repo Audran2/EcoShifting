@@ -689,35 +689,34 @@ header .container-contact .duo {
 header .container-contact .duo .container {
   display: flex;
   transform: translate(30%, 0%);
-  top: 50%;
-  left: 50%;
 }
 @media (max-width: 600px) {
   header .container-contact .duo .container {
     padding-top: 40px;
-    transform: translate(2%, 0%);
+    transform: translate(-0.5%, 0%);
     top: 50%;
     left: 50%;
   }
 }
-header .container-contact .duo contactform {
+header .container-contact .duo #contactus {
   border: 2px solid #C072BB;
   background: rgba(255, 255, 255, 0.3);
-  padding: 3em;
-  height: 390px;
+  padding: 2em;
+  width: 380px;
+  height: 480px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
   text-align: center;
   position: relative;
-  transition: all 0.2s ease-in-out;
 }
 @media (max-width: 600px) {
-  header .container-contact .duo contactform {
+  header .container-contact .duo #contactus {
     backdrop-filter: none;
+    width: 317px;
   }
 }
-header .container-contact .duo contactform p {
+header .container-contact .duo #contactus p {
   font-weight: 500;
   color: #121619;
   opacity: 0.7;
@@ -725,14 +724,16 @@ header .container-contact .duo contactform p {
   margin-top: 0;
   margin-bottom: 60px;
 }
-header .container-contact .duo contactform a {
+header .container-contact .duo #contactus a {
   text-decoration: none;
   color: #121619;
   font-size: 12px;
 }
-header .container-contact .duo contactform input {
+header .container-contact .duo #contactus .field {
+  height: 100px;
+}
+header .container-contact .duo #contactus .field input {
   background: transparent;
-  margin-bottom: 2em;
   border: 2px solid #C072BB;
   border-radius: 5000px;
   backdrop-filter: blur(5px);
@@ -740,40 +741,59 @@ header .container-contact .duo contactform input {
   color: #121619;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  transition: all 0.2s ease-in-out;
   text-align: center;
 }
 @media (max-width: 600px) {
-  header .container-contact .duo contactform input {
+  header .container-contact .duo #contactus .field input {
     backdrop-filter: none;
   }
 }
-header .container-contact .duo contactform input:hover {
+header .container-contact .duo #contactus .field input:hover {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
 }
-header .container-contact .duo contactform input[type=fname], header .container-contact .duo contactform input[type=name], header .container-contact .duo contactform input[type=email], header .container-contact .duo contactform input[type=tel] {
-  width: 200px;
+header .container-contact .duo #contactus .field input[type=text] {
+  width: 280px;
   padding: 0.7em;
 }
-header .container-contact .duo contactform input[type=fname]:focus, header .container-contact .duo contactform input[type=name]:focus, header .container-contact .duo contactform input[type=email]:focus, header .container-contact .duo contactform input[type=tel]:focus {
+header .container-contact .duo #contactus .field input[type=text]:focus {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
 }
-header .container-contact .duo contactform input[type=button] {
-  margin-top: 5px;
-  padding: 0.5em;
-  width: 85px;
+@media (max-width: 600px) {
+  header .container-contact .duo #contactus .field input[type=text] {
+    width: 230px;
+  }
+}
+header .container-contact .duo #contactus .field input[type=submit] {
+  padding: 0.2em;
+  width: 120px;
   font-size: 0.8rem;
 }
-header .container-contact .duo contactform input[type=button]:hover {
+header .container-contact .duo #contactus .field input[type=submit]:hover {
   cursor: pointer;
 }
-header .container-contact .duo contactform input[type=button]:active {
-  background: rgba(255, 255, 255, 0.2);
+header .container-contact .duo #contactus .field small {
+  color: #dc3545;
 }
-header .container-contact .duo contactform:hover {
-  margin: 4px;
+header .container-contact .duo #contactus input.error,
+header .container-contact .duo #contactus textarea.error,
+header .container-contact .duo #contactus select.error {
+  border-color: #dc3545;
+}
+header .container-contact .duo #contactus input.error:focus,
+header .container-contact .duo #contactus textarea.error:focus,
+header .container-contact .duo #contactus select.error:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+header .container-contact .duo #contactus input.success,
+header .container-contact .duo #contactus textarea.success,
+header .container-contact .duo #contactus select.success {
+  border-color: #198754;
+}
+header .container-contact .duo #contactus input.success:focus,
+header .container-contact .duo #contactus textarea.success:focus {
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
 header .container-contact .duo ::placeholder {
   font-family: "Poppins", sans-serif;
@@ -785,7 +805,6 @@ header .container-contact .duo .dropform {
   border-radius: 20px;
   box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
   position: absolute;
-  transition: all 0.2s ease;
 }
 @media (max-width: 600px) {
   header .container-contact .duo .dropform {
@@ -1055,16 +1074,76 @@ body .title .decoration-4 {
 body .button {
   display: flex;
   justify-content: center;
-  background: transparent;
-  border: 2px solid #C072BB;
-  border-radius: 5000px;
   vertical-align: middle;
   text-transform: uppercase;
   text-decoration: none;
   font-family: "Akshar", sans-serif;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  border: 2px solid #C072BB;
+  border-radius: 5000px;
+}
+body .button::before,
+body .button::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #C072BB;
+  top: 50%;
+  border-radius: 50%;
+  z-index: -1;
+}
+body .button::before {
+  transform: translate(-50%, -50%);
+  left: -20px;
+}
+body .button::after {
+  transform: translate(50%, -50%);
+  right: -20px;
+}
+body .button:hover::before {
+  animation: move-left 0.8s both;
+  animation-direction: alternate;
+}
+body .button:hover::after {
+  animation: move-right 0.8s both;
+  animation-direction: alternate;
 }
 body .button:hover {
-  background-color: #C072BB;
+  transition-delay: 0.5s;
+  background: #C072BB;
+}
+@keyframes move-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    height: 400px;
+    width: 400px;
+  }
+}
+@keyframes move-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    height: 400px;
+    width: 400px;
+  }
 }
 
 h1 {
