@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@500&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
@@ -71,9 +72,9 @@
             </div>
             <div class="duo"> 
                 <div class="container">
-                    <form id="contactus">
+                    <form id="contactus" name="contactus">
                         <div class="field">
-                            <label for="name">First name:</label>
+                            <label for="fname">First name:</label>
                             <input type="text" id="fname" name="fname" placeholder="Enter your first name">
                             <small></small>
                         </div>
@@ -83,16 +84,17 @@
                             <small></small>
                         </div>
                         <div class="field">
-                            <label for="name">Email adress:</label>
+                            <label for="email">Email adress:</label>
                             <input type="text" id="email" name="email"placeholder="Enter your email address">
                             <small></small>
                         </div>
                         <div class="field">
-                            <label for="name">Phone number:</label>
-                            <input type="text" id="tel" name="tel" placeholder="Enter your phone number">
+                            <label for="phone">Phone number:</label>
+                            <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
                             <small></small>
                         </div>
                         <div class="field">
+                            <success></success>
                             <input type="submit" value="Send">
                         </div>
                     </form>
@@ -113,8 +115,7 @@
                         <a class="button" href="CO2FP.html">Footprint calculator</a>
                         <a class="button" href="telework.html">Telework</a>
 
-                    </div>
-                    
+                    </div>      
                 </div>
             </div>
         </div>
@@ -131,7 +132,7 @@
         </script> 
     </footer>
 <script src="assets/js/scroll.js"></script>
-<script src="assets\js\utils.js"></script>
-<script src="assets/js/submit.js"></script>
+<script src="assets/js/contactform.js"></script>
+
 </body>
 </html>
