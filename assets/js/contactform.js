@@ -61,8 +61,9 @@ form.addEventListener("submit", function (event) {
     let phoneValid = validation(form.elements["phone"], PHONE_REQUIRED, PHONE_INVALID, phoneRegex);
 
 	if (fnameValid && nameValid && emailValid && phoneValid) {
-		fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-		
+		fetch(scriptURL, { method: 'POST', body: new FormData(form)});
+		const msg2 = $('success');
+		msg2.innerText = "Your information has been taken into account";
 	}
 });
 
