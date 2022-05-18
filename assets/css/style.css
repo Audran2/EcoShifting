@@ -801,7 +801,7 @@ header .container-contact .duo #contactus {
   background: rgba(255, 255, 255, 0.3);
   padding: 2em;
   width: 380px;
-  height: 480px;
+  height: 490px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
@@ -828,7 +828,7 @@ header .container-contact .duo #contactus a {
   font-size: 12px;
 }
 header .container-contact .duo #contactus .field {
-  height: 100px;
+  height: 95px;
 }
 header .container-contact .duo #contactus .field input {
   background: transparent;
@@ -873,6 +873,9 @@ header .container-contact .duo #contactus .field input[type=submit]:hover {
 }
 header .container-contact .duo #contactus .field small {
   color: #dc3545;
+}
+header .container-contact .duo #contactus .field #success {
+  color: #198754;
 }
 header .container-contact .duo #contactus input.error,
 header .container-contact .duo #contactus textarea.error,

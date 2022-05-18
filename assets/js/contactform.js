@@ -45,7 +45,7 @@ const PHONE_REQUIRED = "Please enter your phone number";
 const PHONE_INVALID = "Please enter a correct phone number format";
 
 const nameRegex = 
-	/^[a-zA-Z][a-zA-Z0-9 ]+$/
+	/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/
 const emailRegex =
 	/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const phoneRegex =
@@ -61,9 +61,11 @@ form.addEventListener("submit", function (event) {
     let phoneValid = validation(form.elements["phone"], PHONE_REQUIRED, PHONE_INVALID, phoneRegex);
 
 	if (fnameValid && nameValid && emailValid && phoneValid) {
-		fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-		
-	}
+		fetch(scriptURL, { method: 'POST', body: new FormData(form)});
+		var div = document.getElementById('success');
+      	div.innerHTML = 'Thank you. Your information has been taken into account';
+		$('#contactus')[0].reset();
+	};
 });
 
 
