@@ -6,6 +6,65 @@ header{
 
     //Home page//
     .container-home{
+        // Animation nuage
+        #scene{
+            div{
+                .deco1{
+                    position: absolute;
+                    top: 0;
+                    @include for-mobile{
+                        display: none;
+                    }
+                    
+                }
+                .deco3{
+                    top: -200px;
+                    left: 360px;
+                    position: absolute;
+                    z-index: 1;
+                    opacity: 0.9;
+                    @include for-mobile{
+                        display: none;
+                    }
+                }
+                .deco2{
+                    top: -150px;
+                    left: 1000px;
+                    position: absolute;
+                    z-index: 1;
+                    opacity: 0.8;
+                    @include for-mobile{
+                        display: none;
+                    }
+                }
+
+                .deco4{
+                    top: 150px;
+                    left: 500px;
+                    position: absolute;
+                    z-index: 1;
+                    opacity: 0.8;
+                    @include for-mobile{
+                        display: none;
+                    }
+                }
+
+                .deco5{
+                    top: 60px;
+                    left: 1300px;
+                    position: absolute;
+                    z-index: 1;
+                    opacity: 0.8;
+                    @include for-mobile{
+                        display: none;
+                    }
+                }
+
+            }
+
+
+        }
+
         .container{
             justify-content: center;
             width: 450px;
@@ -22,7 +81,7 @@ header{
                 width: 150px;
                 padding: 15px;
             }
-    
+
         }
         a{
             img{
@@ -37,27 +96,27 @@ header{
                 }
             }
         }
-    
-    
-    
-    
+
+
+
+
         @keyframes updown {
             0% {
             transform: translateY(-40%);
             }
-    
+
             50% {
             transform: translateY(40%);
             }
-    
+
             100% {
             transform: translateY(-40%);
             }
         }
-    
+
         // 1 section
-    
-    
+
+
         .section-calculator{
             margin-top: 300px;
             margin-left: auto;
@@ -86,8 +145,8 @@ header{
                     width: 200px;
                     padding: 15px;
                 }
-    
-            }   
+
+            }
             .right{
                 @include for-mobile{
                     padding-top: 20px;
@@ -98,11 +157,11 @@ header{
                         width: 100%;
                         height: 100%;
                     }
-                    
+
                 }
-            } 
+            }
         }
-    
+
         // section2
         .section-telework{
             margin-top: 380px;
@@ -147,7 +206,7 @@ header{
                         margin: 15px auto;
                     }
                 }
-    
+
             }
             .left{
                 width: 600px;
@@ -155,78 +214,116 @@ header{
                 @include for-mobile{
                     padding-top: 80px;
                     width: 100%;
+
                 }
-                p{
-                    margin-top: 10px;
-                }   
-                .carre-un{
-                    text-align: center;
-                    position: absolute;
-                    width: 200px;
-                    height: 130px;
-                    background-color: $colortext;
-                    border-radius: 20px;
-                    margin-left: -60px;
-                    top: 40%;
-                    color: $background;
-                    @include for-mobile{
-                        left: 37%;
+                /* Slideshow container */
+                .slideshow-container {
+                    position: relative;
+                    margin: auto;
+                    .infos{
+                        position: absolute;
+                            // bottom: 220px;
+                            // left: 400px;
+                            bottom: 55%;
+                            left: 66.5%;
+                            @include for-mobile{
+                                bottom: 50%;
+                            }
+                            
+
+                        h4{
+                            color: white;
+                            padding: 10px 12px;
+                            background-color: rgba(0, 0, 0, 0.801);
+                            width: 120px;
+                            text-align: center;
+                            margin-bottom: 20px;
+                            @include for-mobile{
+                                font-size: 20px;
+                                width: 80px;
+                            }
+
+                        }
+                        p{
+                            color: white;
+                            background-color: rgba(0, 0, 0, 0.801);
+                            font-size: 30px;
+                            width: 200px;
+                            text-align: center;
+                            @include for-mobile{
+                                font-size: 23px;
+                                width: 130px;
+                            }
+                        }
                     }
-                    p {
+                    .numbertext {
                         color: $background;
+                        font-size: 30px;
+                        padding: 8px 12px;
+                        position: absolute;
+                        font-family: $primary-font;
+                        top: 0;
+                      }
+                    .mySlides {
+                        display: none;
+                        img{
+                            width: 600px;
+                            height:400px;
+                            @include for-mobile{
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
                     }
-                }
-                .carre-deux{
-                    text-align: center;
-                    position: absolute;
-                    width: 150px;
-                    height: 130px;
-                    background-color: $secondarycolor;
-                    border-radius: 20px;
-                    bottom: 0px;
-                    right: 30%;
-                    margin-bottom: -45px;
-                    color: $background;
-                    @include for-mobile{
-                        width: 200px;
-                        height: 100px;
-                        top: 240%;
-                        left: 17%;
+                    .prev, .next {
+                        cursor: pointer;
+                        position: absolute;
+                        top: 50%;
+                        padding: 16px;
+                        color: rgb(255, 255, 255);
+                        margin-top: -22px;
+                        font-weight: bold;
+                        font-size: 40px;
+                        animation: mouvenext 2s ease infinite ;
+                        
+                    
                     }
-                    p {
-                        color: $background;
+
+                    .next {
+                        right: 10px;
+                        animation: mouvenext 2s ease infinite ;
+                    }
+                    .prev{
+                        left: 10px;
+                        animation: mouvepre 2s ease infinite ;
                     }
                     
-                }
-                .carre-trois{
-                    text-align: center;
-                    position: absolute;
-                    width: 300px;
-                    height: 100px;
-                    background-color: $decolor;
-                    border-radius: 20px;
-                    right: 5%;
-                    margin-top: -75px;
-                    color: $background;
-                    @include for-mobile{
-                        width: 200px;
-                        height: 100px;
-                        top: 500%;
-                        left: 17%;
+                    @keyframes mouvenext {
+                        0%{-webkit-transform: translateX(0);}
+                        50% {-webkit-transform: translateX(15px);}
+                        100%{-webkit-transform: translateX(0);}
                     }
-                    p {
-                        color: $background;
+                   
+                    @keyframes mouvepre {
+                        0%{-webkit-transform: translateX(0);}
+                        50% {-webkit-transform: translateX(-15px);}
+                        100%{-webkit-transform: translateX(0);}
                     }
-                }
-                img {
-                    width: 100%;
-                    @include for-mobile{
-                        display: none;
+
+                    .fade {
+                        animation-name: fade;
+                        animation-duration: 1.5s;
                     }
+
+                    @keyframes fade {
+                        from {opacity: .7}
+                        to {opacity: 1}
+                    }
+
                 }
             }
         }
-    
+
         // section 3
         section{
             margin: 250px auto;
@@ -234,13 +331,13 @@ header{
                 margin: 0 auto;
                 padding-top: 430px;
             }
-            
+
             h3{
                 display: flex;
                 justify-content: center;
                 font-family: $primary-font;
                 font-size: 40px;
-                padding-bottom: 70px;    
+                padding-bottom: 70px;
             }
             p{
                 text-align: justify;
@@ -390,7 +487,7 @@ header{
             @include for-mobile{
                 display: none;
             }
-            
+
             &-1 {
                 background-color: $primarycolor;
                 height: 200px;
@@ -406,14 +503,14 @@ header{
                 bottom: -450px;
                 right: 850px;
                 z-index: -1;
-            }   
+            }
             &-3 {
                 background-color: $secondarycolor;
                 height: 120px;
                 width: 120px;
                 top: 1450px;
                 right: 170px;
-            }  
+            }
             &-4 {
                 background-color: $primarycolor;
                 height: 120px;
@@ -512,7 +609,7 @@ header{
 
     //contact page//
     .container-contact{
-        .presentation{ 
+        .presentation{
             margin-top: 100px;
             justify-content: space-between;
             display: flex;
@@ -560,7 +657,7 @@ header{
                 }
             }
         }
-        .teammember{      
+        .teammember{
             padding-top: 200px;
             color: $colortext;
             @include for-mobile{
@@ -570,15 +667,15 @@ header{
                 display: flex;
                 justify-content: center;
             }
-            .triple{  
-                padding-top: 50px;      
+            .triple{
+                padding-top: 50px;
                 justify-content: space-between;
                 display: flex;
                 align-items: center;
                 @include for-mobile{
                     width: 100%;
                     flex-wrap: wrap;
-                    
+
                 }
                 .first{
                     display: flex;
@@ -646,7 +743,7 @@ header{
                 }
             }
         }
-        .duo{ 
+        .duo{
             margin: 200px 0px 150px 0px;
             justify-content: space-between;
             display: flex;
@@ -712,7 +809,7 @@ header{
                             background: rgba(255,255,255,0.1);
                             box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
                         }
-                            
+
                         &[type="text"] {
                             width: 280px;
                             padding: 0.7em;
@@ -728,7 +825,7 @@ header{
                             padding: 0.2em;
                             width: 120px;
                             font-size: 0.8rem;
-                            
+
                             &:hover {
                                 cursor: pointer;
                             }
@@ -743,7 +840,7 @@ header{
                     }
                 }
 
-            
+
 
 
                 input.error,
@@ -780,12 +877,12 @@ header{
                     border-radius: 20px;
                     box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
                     position: absolute;
-                    
+
                     @include for-mobile{
                         display: none;
                         backdrop-filter: none;
                     }
-                    
+
                     &-1 {
                         background-color: $primarycolor;
                         height: 80px;
@@ -801,14 +898,14 @@ header{
                         bottom: -20px;
                         right: -50px;
                         z-index: -1;
-                    }   
+                    }
                     &-3 {
                         background-color: $secondarycolor;
                         height: 120px;
                         width: 120px;
                         top: -70px;
                         right: -60px;
-                    }  
+                    }
                     &-4 {
                         background-color: $secondarycolor;
                         height: 60px;
@@ -824,7 +921,7 @@ header{
                 button:focus {
                     outline: none;
                 }
-        
+
             .text{
                 display: flex;
                 flex-direction: column;
@@ -834,7 +931,7 @@ header{
                     text-align: justify;
                     padding-top: 15px;
                     @include for-mobile{
-                        width: 100%;    
+                        width: 100%;
                         padding-bottom: 20px;
                     }
                 }
