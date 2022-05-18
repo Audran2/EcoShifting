@@ -9,22 +9,10 @@ header {
 }
 header .container-home #scene div .deco1 {
   position: absolute;
-  top: 0;
+  top: 10;
 }
 @media (max-width: 600px) {
   header .container-home #scene div .deco1 {
-    display: none;
-  }
-}
-header .container-home #scene div .deco3 {
-  top: -200px;
-  left: 360px;
-  position: absolute;
-  z-index: 1;
-  opacity: 0.9;
-}
-@media (max-width: 600px) {
-  header .container-home #scene div .deco3 {
     display: none;
   }
 }
@@ -37,6 +25,18 @@ header .container-home #scene div .deco2 {
 }
 @media (max-width: 600px) {
   header .container-home #scene div .deco2 {
+    display: none;
+  }
+}
+header .container-home #scene div .deco3 {
+  top: -200px;
+  left: 360px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.9;
+}
+@media (max-width: 600px) {
+  header .container-home #scene div .deco3 {
     display: none;
   }
 }
@@ -801,7 +801,7 @@ header .container-contact .duo #contactus {
   background: rgba(255, 255, 255, 0.3);
   padding: 2em;
   width: 380px;
-  height: 490px;
+  height: 580px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
@@ -831,6 +831,20 @@ header .container-contact .duo #contactus a {
 header .container-contact .duo #contactus .field {
   height: 95px;
 }
+header .container-contact .duo #contactus .field select {
+  width: 270px;
+  padding: 0.6em;
+}
+header .container-contact .duo #contactus .field select:focus {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 600px) {
+  header .container-contact .duo #contactus .field select {
+    width: 230px;
+  }
+}
+header .container-contact .duo #contactus .field select,
 header .container-contact .duo #contactus .field input {
   background: transparent;
   border: 2px solid #C072BB;
@@ -843,32 +857,39 @@ header .container-contact .duo #contactus .field input {
   text-align: center;
 }
 @media (max-width: 600px) {
-  header .container-contact .duo #contactus .field input {
+  header .container-contact .duo #contactus .field select,
+header .container-contact .duo #contactus .field input {
     backdrop-filter: none;
   }
 }
+header .container-contact .duo #contactus .field select:hover,
 header .container-contact .duo #contactus .field input:hover {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
 }
+header .container-contact .duo #contactus .field select[type=text],
 header .container-contact .duo #contactus .field input[type=text] {
-  width: 280px;
-  padding: 0.7em;
+  width: 270px;
+  padding: 0.6em;
 }
+header .container-contact .duo #contactus .field select[type=text]:focus,
 header .container-contact .duo #contactus .field input[type=text]:focus {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 600px) {
-  header .container-contact .duo #contactus .field input[type=text] {
+  header .container-contact .duo #contactus .field select[type=text],
+header .container-contact .duo #contactus .field input[type=text] {
     width: 230px;
   }
 }
+header .container-contact .duo #contactus .field select[type=submit],
 header .container-contact .duo #contactus .field input[type=submit] {
   padding: 0.2em;
   width: 120px;
   font-size: 0.8rem;
 }
+header .container-contact .duo #contactus .field select[type=submit]:hover,
 header .container-contact .duo #contactus .field input[type=submit]:hover {
   cursor: pointer;
 }

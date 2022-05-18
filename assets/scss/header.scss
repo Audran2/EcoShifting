@@ -11,28 +11,30 @@ header{
             div{
                 .deco1{
                     position: absolute;
-                    top: 0;
+                    top: 10;
                     @include for-mobile{
                         display: none;
                     }
                     
                 }
-                .deco3{
-                    top: -200px;
-                    left: 360px;
-                    position: absolute;
-                    z-index: 1;
-                    opacity: 0.9;
-                    @include for-mobile{
-                        display: none;
-                    }
-                }
+                
                 .deco2{
                     top: -150px;
                     left: 1000px;
                     position: absolute;
                     z-index: 1;
                     opacity: 0.8;
+                    @include for-mobile{
+                        display: none;
+                    }
+                }
+
+                .deco3{
+                    top: -200px;
+                    left: 360px;
+                    position: absolute;
+                    z-index: 1;
+                    opacity: 0.9;
                     @include for-mobile{
                         display: none;
                     }
@@ -766,7 +768,7 @@ header{
                 background: $white;
                 padding: 2em;
                 width: 380px;
-                height: 490px;
+                height: 580px;
                 border-radius: 20px;
                 backdrop-filter: blur(10px);
                 box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
@@ -792,6 +794,18 @@ header{
                 }
                 .field{
                     height: 95px;
+                    select{
+                        width: 270px;
+                        padding: 0.6em;
+                        &:focus {
+                            background: rgba(255,255,255,0.1);
+                            box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+                        }
+                        @include for-mobile{
+                            width: 230px;
+                        }
+                    }
+                    select,
                     input {
                         background: transparent;
                         border: $border;
@@ -811,8 +825,8 @@ header{
                         }
 
                         &[type="text"] {
-                            width: 280px;
-                            padding: 0.7em;
+                            width: 270px;
+                            padding: 0.6em;
                             &:focus {
                                 background: rgba(255,255,255,0.1);
                                 box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
