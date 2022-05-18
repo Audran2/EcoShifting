@@ -41,15 +41,15 @@ const NAME_REQUIRED = "Please enter your name";
 const ALLNAME_INVALID = "Please enter a correct name format";
 const EMAIL_REQUIRED = "Please enter your email";
 const EMAIL_INVALID = "Please enter a correct email address format";
-const PHONE_REQUIRED = "Please enter your phone number";
-const PHONE_INVALID = "Please enter a correct phone number format";
+const COMMENT_REQUIRED = "Please enter your comment";
+const COMMENT_INVALID = "Please enter a correct comment format";
 
 const nameRegex = 
 	/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/
 const emailRegex =
 	/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const phoneRegex =
-	/^(?:(?:\+|00)33[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})$/;
+const commentRegex =
+	/^[a-zA-Z ]*$/;
 
 form.addEventListener("submit", function (event) {
 
@@ -58,9 +58,9 @@ form.addEventListener("submit", function (event) {
 	let fnameValid = validation(form.elements["fname"], FNAME_REQUIRED, ALLNAME_INVALID, nameRegex);
 	let nameValid = validation(form.elements["name"], NAME_REQUIRED, ALLNAME_INVALID, nameRegex);
 	let emailValid = validation(form.elements["email"], EMAIL_REQUIRED, EMAIL_INVALID, emailRegex);
-    let phoneValid = validation(form.elements["phone"], PHONE_REQUIRED, PHONE_INVALID, phoneRegex);
+    let commentValid = validation(form.elements["comment"], COMMENT_REQUIRED, COMMENT_INVALID, commentRegex);
 
-	if (fnameValid && nameValid && emailValid && phoneValid) {
+	if (fnameValid && nameValid && emailValid && commentValid) {
 		fetch(scriptURL, { method: 'POST', body: new FormData(form)});
 		var div = document.getElementById('success');
       	div.innerHTML = 'Thank you. Your information has been taken into account';
