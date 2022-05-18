@@ -6,7 +6,7 @@ header{
 
     //Home page//
     .container-home{
-        // Animation nuage
+        // Cloud animation
         #scene{
             div{
                 .deco1{
@@ -116,8 +116,7 @@ header{
             }
         }
 
-        // 1 section
-
+        // first block (CO2 page redirection)
 
         .section-calculator{
             margin-top: 300px;
@@ -164,7 +163,8 @@ header{
             }
         }
 
-        // section2
+        // second block (telework page redirection)
+
         .section-telework{
             margin-top: 380px;
             margin-left: auto;
@@ -327,7 +327,8 @@ header{
             }
         }
 
-        // section 3
+        // third block (contact page redirection)
+
         section{
             margin: 250px auto;
             @include for-mobile{
@@ -423,6 +424,9 @@ header{
 
     //Telework page//
     .container-telework{
+
+        // first block (telework reason)
+        
         .whytelework{
             padding-top: 50px;
             padding-bottom: 50px;
@@ -460,6 +464,9 @@ header{
                 }
             }
         }
+
+        // second block (telework calculator)
+
         .calculator-telework {
             display: flex;
             top: 50%;
@@ -612,6 +619,9 @@ header{
 
     //contact page//
     .container-contact{
+
+        // first block (presentation + picture)
+
         .presentation{
             margin-top: 100px;
             justify-content: space-between;
@@ -660,6 +670,9 @@ header{
                 }
             }
         }
+
+        // second block (team member)
+
         .teammember{
             padding-top: 200px;
             color: $colortext;
@@ -746,6 +759,9 @@ header{
                 }
             }
         }
+
+        // third block (contact form + CO2 & telework page redirection)
+
         .duo{
             margin: 200px 0px 150px 0px;
             justify-content: space-between;

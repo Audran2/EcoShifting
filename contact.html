@@ -17,6 +17,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
+    <!-- importation nav menu -->
     <nav>
         <div id="nav-placeholder">
 
@@ -28,9 +29,11 @@
         });
         </script> 
     </nav>
+    <!-- beginning header -->
     <header>
         <div class="title">
             <h1>Contact us</h1>
+            <!-- square decoration -->
             <div class="drops">
                 <div class="decoration decoration-1"></div>
                 <div class="decoration decoration-2"></div>
@@ -39,6 +42,7 @@
             </div>
         </div>
         <div class="container-contact">
+            <!-- first block (presentation + picture) -->
             <div class="presentation"> 
                 <div class="text">
                     <h2>Who are we ?</h2>
@@ -50,6 +54,7 @@
                     <img src="assets/img/society.jpg" alt="society">
                 </div>
             </div>
+            <!-- second block (team member) -->
             <div class="teammember">   
                 <h2>Team member</h2>       
                 <div class="triple">
@@ -70,36 +75,38 @@
                     </div>
                 </div>
             </div>
+            <!-- third block (contact form + CO2 & telework page redirection) -->
             <div class="duo"> 
                 <div class="container">
+                    <!-- form -->
                     <form id="contactus" name="contactus">
                         <div class="field">
                             <label for="fname">First name:</label>
                             <input type="text" id="fname" name="fname" placeholder="Enter your first name">
-                            <small></small>
+                            <help></help>
                         </div>
                         <div class="field">
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" placeholder="Enter your full name">
-                            <small></small>
+                            <help></help>
                         </div>
                         <div class="field">
                             <label for="email">Email address:</label>
                             <input type="text" id="email" name="email"placeholder="Enter your email address">
-                            <small></small>
+                            <help></help>
                         </div>
                         <div class="field">
                             <label for="type">Who are you:</label>
                             <select id="type" name="type">
-                                <option valeur="cust">Customer</option>
-                                <option valeur="pro">Professional</option>
-                                <option valeur="ind">Individual</option>
+                                <option value="ind">Individual</option>
+                                <option value="pro">Professional</option>
+                                <option value="pub">Public service</option>
                             </select>
                         </div>
                         <div class="field">
                             <label for="comment">Comment:</label>
                             <input type="text" id="comment" name="comment" placeholder="Enter your comment">
-                            <small></small>
+                            <help></help>
                         </div>
                         <div class="field">
                             <input type="submit" value="Send">
@@ -128,6 +135,8 @@
             </div>
         </div>
     </header>
+    <!-- end header -->
+    <!-- importation footer -->
     <footer> 
         <div id="footer-placeholder">
 

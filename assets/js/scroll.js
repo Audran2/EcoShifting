@@ -1,3 +1,5 @@
+// ScrollReveal animation
+
 ScrollReveal().reveal('h1', {
   origin: 'bottom', delay: 200, duration: 1000, distance: '100px'
 });
