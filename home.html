@@ -16,12 +16,22 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
+
     <header>
         <div class="container-home">
+            <div id="scene">
+                <div data-depth="0.2"><img  src="assets\img\cloud.png" alt="" class="cloud deco3"></div>
+                <div data-depth="0.6"><img src="assets\img\cloud.png" alt="" class="cloud deco2"></div>
+                <div data-depth="0.4"><img src="assets\img\cloud.png" alt="" class="cloud deco1"></div>
+                <div data-depth="0.3"><img src="assets\img\cloud.png" alt="" class="cloud deco4"></div>
+                <div data-depth="0.5"><img src="assets\img\cloud.png" alt="" class="cloud deco5"></div>
+
+            </div>
             <h1>Eco· shifting</h1>
+
             <div class="container">
                 <p>Discover Our New Online Carbon Footprint Calculator</p>
-                <a class="button" href="CO2FP.html">Calculate</a> 
+                <a class="button" href="CO2FP.html">Calculate</a>
             </div>
             <a href="#transition">
                 <img src="assets\img\chevron-bottom.png" alt="chevron(bottom)">
@@ -35,7 +45,7 @@
                     <p>Concerned about the environment? Discover our online calculator to help you in your everyday travel. As a bonus, tips to lower your carbon footprint without handicapping yourself.</p>
                     <a class="button" href="CO2FP.html">Try now</a>
                 </div>
-                
+
                 <div class="right">
                     <img src="assets\img\footprint.png" alt="carbon footprint">
 
@@ -44,19 +54,41 @@
             <!-- section2  -->
             <div class="section-telework">
                 <div class="left">
-                    <div class="carre-un">
-                        <h4>26%</h4>
-                        <p>employees concerned</p>
-                    </div>
-                    <div class="carre-deux">
-                        <h4>3 days</h4>
-                        <p>per week average</p>
-                    </div>
-                    <div class="carre-trois">
-                        <h4>55%</h4>
-                        <p>more productive</p>
-                    </div>
-                    <img src="assets\img\telework.jpg" alt="">
+                    <div class="slideshow-container">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                          <div class="numbertext">01</div>
+                          <img src="assets\img\concerned.avif" >
+                          <div class="infos">
+                            <h4>26%</h4>
+                            <p>Employees concerned</p>
+                          </div>
+                        </div>
+
+                        <div class="mySlides fade">
+                          <div class="numbertext">02</div>
+                          <img src="assets\img\telework.jpg" >
+                          <div class="infos">
+                            <h4>3 days</h4>
+                            <p>Per week average</p>
+                          </div>
+
+                        </div>
+
+                        <div class="mySlides fade">
+                          <div class="numbertext">03</div>
+                          <img src="assets\img\productive.avif" >
+                          <div class="infos">
+                            <h4>55%</h4>
+                            <p>More productive</p>
+                            </div>
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      </div>
                 </div>
                 <div class="right">
                     <h2>Get the best of telework</h2>
@@ -65,7 +97,7 @@
                     <div><img src="assets\img\promotion.png" alt="promotion"><p>Save your money</p></div>
                     <a class="button" href="telework.html">Try now</a>
                 </div>
-                
+
             </div>
             <!-- section3  -->
             <section id="section3">
@@ -76,18 +108,23 @@
         </div>
     </header>
     <!-- footer -->
-    <footer> 
+    <footer>
         <div id="footer-placeholder">
 
         </div>
-        
+
         <script>
         $(function(){
         $("#footer-placeholder").load("footer.html");
         });
-        </script> 
+        </script>
     </footer>
+<script src="assets\js\parallax.js"></script>
+<script src="assets\js\slider.js"></script>
 <script src="assets/js/scroll.js"></script>
 <script src="assets\js\utils.js"></script>
+
+
+
 </body>
 </html>
