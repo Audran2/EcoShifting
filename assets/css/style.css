@@ -1224,8 +1224,8 @@ body .button::before,
 body .button::after {
   position: absolute;
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background: #C072BB;
   top: 50%;
   border-radius: 50%;
