@@ -229,6 +229,7 @@ header{
                             bottom: 55%;
                             left: 66.5%;
                             @include for-mobile{
+                                left: 60%;
                                 bottom: 50%;
                             }
                             
@@ -333,12 +334,13 @@ header{
             margin: 250px auto;
             @include for-mobile{
                 margin: 0 auto;
-                padding-top: 430px;
+                padding-top: 150px;
             }
 
             h3{
                 display: flex;
                 justify-content: center;
+                text-align: center; 
                 font-family: $primary-font;
                 font-size: 40px;
                 padding-bottom: 70px;

@@ -229,6 +229,7 @@ header .container-home .section-telework .left .slideshow-container .infos {
 }
 @media (max-width: 600px) {
   header .container-home .section-telework .left .slideshow-container .infos {
+    left: 60%;
     bottom: 50%;
   }
 }
@@ -340,12 +341,13 @@ header .container-home section {
 @media (max-width: 600px) {
   header .container-home section {
     margin: 0 auto;
-    padding-top: 430px;
+    padding-top: 150px;
   }
 }
 header .container-home section h3 {
   display: flex;
   justify-content: center;
+  text-align: center;
   font-family: "Akshar", sans-serif;
   font-size: 40px;
   padding-bottom: 70px;
