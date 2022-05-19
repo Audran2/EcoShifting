@@ -1012,6 +1012,15 @@ header .container-contact .duo .text .twobutton .button {
     width: 250px;
   }
 }
+header .container-consent .legal-mention {
+  margin: auto;
+  width: 70%;
+}
+header .container-consent .legal-mention p {
+  text-indent: 60px;
+  text-align: justify;
+  padding-bottom: 25px;
+}
 
 footer {
   background-color: #121619;

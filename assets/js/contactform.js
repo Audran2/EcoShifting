@@ -58,6 +58,7 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbwXRahKw8X8CA69p8Unvt
 const form = document.querySelector("#contactus");
 
 //constants for the different message (two for each input)
+
 const FNAME_REQUIRED = "Please enter your first name"
 const NAME_REQUIRED = "Please enter your name";
 const ALLNAME_INVALID = "Please enter a correct name format";
@@ -67,6 +68,7 @@ const COMMENT_REQUIRED = "Please enter your comment";
 const COMMENT_INVALID = "Please enter a correct comment format";
 
 // constants for regex (name, email and comment)
+
 const nameRegex = 
 	/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/
 const emailRegex =
@@ -75,6 +77,7 @@ const commentRegex =
 	/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/;
 
 // added an event listener on the form button
+
 form.addEventListener("submit", function (event) {
 
 	event.preventDefault();
@@ -82,12 +85,14 @@ form.addEventListener("submit", function (event) {
 	// declaration of block scoped variables
 	// one for each input related to the validation function
 	// we declare the input, the two message (one for the error and one for invalid format) and the regex
+
 	let fnameValid = validation(form.elements["fname"], FNAME_REQUIRED, ALLNAME_INVALID, nameRegex);
 	let nameValid = validation(form.elements["name"], NAME_REQUIRED, ALLNAME_INVALID, nameRegex);
 	let emailValid = validation(form.elements["email"], EMAIL_REQUIRED, EMAIL_INVALID, emailRegex);
     let commentValid = validation(form.elements["comment"], COMMENT_REQUIRED, COMMENT_INVALID, commentRegex);
 
 	//if all the information is good, we send them on the excel, we write a message of reception and we reset the inputs
+	
 	if (fnameValid && nameValid && emailValid && commentValid) {
 		fetch(scriptURL, { method: 'POST', body: new FormData(form)});
 		var div = document.getElementById('success');

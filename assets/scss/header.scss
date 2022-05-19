@@ -988,4 +988,18 @@ header{
             }
         }
     }
+
+    // consent page
+
+    .container-consent {
+        .legal-mention {
+            margin: auto;
+            width: 70%;
+            p {
+                text-indent: 60px;
+                text-align: justify;
+                padding-bottom: 25px;
+            }
+        }
+    }
 }
