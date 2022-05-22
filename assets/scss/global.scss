@@ -4,7 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     color: $colortext;
-    margin: 0px;
+    margin: 0;
 }
 html{
     scroll-behavior: smooth;
@@ -14,7 +14,7 @@ body {
 
     // title style with square decoration
     .title{
-        padding: 150px 0px;
+        padding: 150px 0;
         font-weight: bold;
         font-size: 30px;
         text-align: center;
@@ -64,7 +64,7 @@ body {
                 width: 90px;
                 border-radius: 40px 0 0 40px;
                 bottom: 510px;
-                right: 0px;
+                right: 0;
                 z-index: -1;
                 @include for-mobile{
                     height: 90px;

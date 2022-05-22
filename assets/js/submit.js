@@ -1,21 +1,23 @@
 // setup jquery
+// noinspection JSJQueryEfficiency,JSDeprecatedSymbols,JSUnresolvedVariable
+
 $(document).ready(function() {
 
     function calculate(){
-        var address = $("#1").text();
-        var address2 = $("#2").text();
+        const address = $("#1").text();
+        const address2 = $("#2").text();
 
-        var lat1 = address.split(",")[0];
-        var lng1 = address.split(",")[1];
-        var lat2 = address2.split(",")[0];
-        var lng2 = address2.split(",")[1];
+        const lat1 = address.split(",")[0];
+        const lng1 = address.split(",")[1];
+        const lat2 = address2.split(",")[0];
+        const lng2 = address2.split(",")[1];
 
-        var R = 3958.8; // Radius of the Earth in miles
-        var rlat1 = lat1 * (Math.PI/180); // Convert degrees to radians
-        var rlat2 = lat2 * (Math.PI/180); // Convert degrees to radians
-        var difflat = rlat2-rlat1; // Radian difference (latitudes)
-        var difflon = (lng2-lng1) * (Math.PI/180); // Radian difference (longitudes)
-        var distance = 2 * R
+        const R = 3958.8; // Radius of the Earth in miles
+        const rlat1 = lat1 * (Math.PI/180); // Convert degrees to radians
+        const rlat2 = lat2 * (Math.PI/180); // Convert degrees to radians
+        const difflat = rlat2-rlat1; // Radian difference (latitudes)
+        const difflon = (lng2-lng1) * (Math.PI/180); // Radian difference (longitudes)
+        let distance = 2 * R
             * Math.asin(
                 Math.sqrt(
                     Math.sin(
@@ -42,7 +44,7 @@ $(document).ready(function() {
         }
 
         // add an empty table to #output
-        $("#table").append("<table class='table table-striped'> <tr> <th>Name</th> <th>Emmission (g CO2 / person)</th></tr></table>");
+        $("#table").append("<table class='table table-striped'> <tr> <th>Name</th> <th>Emission (g CO2 / person)</th></tr></table>");
 
         $.getJSON("https://api.monimpacttransport.fr/beta/getEmissionsPerDistance?km="+distance+"&filter=smart&fields=emoji,description", function(data){
             $.each(data, function(index, value){
@@ -67,8 +69,8 @@ $(document).ready(function() {
         }
 
         // if a table already exist remove it
-        var address = $("#input-start").val();
-        var address2 = $("#input-end").val();
+        const address = $("#input-start").val();
+        const address2 = $("#input-end").val();
 
         // if address and address2 are empty return
         if (address === "" || address2 === "") {
@@ -78,14 +80,14 @@ $(document).ready(function() {
         // do a request that return a json and console log it
         $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?address=" + address.replaceAll(" ", "") + '&key=AIzaSyDrFscywJGn02AB0ALLId4oOE1gJoamREE', function (data) {
             // get the first result
-            var firstResult = data.results[0];
+            const firstResult = data.results[0];
             // get the geometry
-            var geometry = firstResult.geometry;
+            const geometry = firstResult.geometry;
             // get the location
-            var location = geometry.location;
+            const location = geometry.location;
             // get the lat and lng
-            var lat = location.lat;
-            var lng = location.lng;
+            const lat = location.lat;
+            const lng = location.lng;
             console.log("Addresse 1: " + address);
             console.log(lat + "," + lng);
             // at lat and lng to #1
@@ -93,14 +95,14 @@ $(document).ready(function() {
         });
         $.getJSON("https://maps.googleapis.com/maps/api/geocode/json?address=" + address2.replaceAll(" ", "") + '&key=AIzaSyDrFscywJGn02AB0ALLId4oOE1gJoamREE', function (data) {
             // get the first result
-            var firstResult = data.results[0];
+            const firstResult = data.results[0];
             // get the geometry
-            var geometry = firstResult.geometry;
+            const geometry = firstResult.geometry;
             // get the location
-            var location = geometry.location;
+            const location = geometry.location;
             // get the lat and lng
-            var lat = location.lat;
-            var lng = location.lng;
+            const lat = location.lat;
+            const lng = location.lng;
             console.log("Addresse 2: " + address2);
             console.log(lat + "," + lng);
             // at lat and lng to #2

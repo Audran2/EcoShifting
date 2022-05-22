@@ -1,16 +1,16 @@
 /*import all scss file in one*/
 header {
-  margin: 0px 80px;
+  margin: 0 80px;
 }
 @media (max-width: 600px) {
   header {
-    margin: 0px 15px;
+    margin: 0 15px;
   }
 }
 header .container-home #scene div .deco1 {
   position: absolute;
-  top: 50;
-  left: -300;
+  top: 50px;
+  left: -50px;
 }
 @media (max-width: 600px) {
   header .container-home #scene div .deco1 {
@@ -396,11 +396,11 @@ header .formCalc form .form-group label {
 header .formCalc form .form-group input {
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
-  font-style: 20px;
+  font-size: 20px;
   width: 500px;
   height: 40px;
   background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 45px;
   border: 2px solid #C072BB;
   outline: none;
@@ -495,7 +495,7 @@ header .container-telework form {
   width: 900px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
-  box-shadow: 20px 20px 40px -6px rgb a(0, 0, 0, 0.2);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
   text-align: center;
   position: relative;
 }
@@ -662,7 +662,7 @@ header .container-contact .presentation .text p {
 }
 @media (max-width: 600px) {
   header .container-contact .presentation .text p {
-    margin: 0px;
+    margin: 0;
     width: 100%;
     padding-bottom: 50px;
   }
@@ -682,32 +682,32 @@ header .container-contact .presentation .photo {
     margin-top: 150px;
   }
 }
-header .container-contact .teammember {
+header .container-contact .team-member {
   padding-top: 200px;
   color: #121619;
 }
 @media (max-width: 600px) {
-  header .container-contact .teammember {
+  header .container-contact .team-member {
     padding-top: 150px;
   }
 }
-header .container-contact .teammember h2 {
+header .container-contact .team-member h2 {
   display: flex;
   justify-content: center;
 }
-header .container-contact .teammember .triple {
+header .container-contact .team-member .triple {
   padding-top: 50px;
   justify-content: space-between;
   display: flex;
   align-items: center;
 }
 @media (max-width: 600px) {
-  header .container-contact .teammember .triple {
+  header .container-contact .team-member .triple {
     width: 100%;
     flex-wrap: wrap;
   }
 }
-header .container-contact .teammember .triple .first {
+header .container-contact .team-member .triple .column {
   display: flex;
   margin: 20px;
   flex-direction: column;
@@ -718,67 +718,20 @@ header .container-contact .teammember .triple .first {
   width: 350px;
 }
 @media (max-width: 600px) {
-  header .container-contact .teammember .triple .first {
+  header .container-contact .team-member .triple .column {
     padding-bottom: 50px;
   }
 }
-header .container-contact .teammember .triple .first img {
+header .container-contact .team-member .triple .column img {
   width: 150px;
   height: 170px;
 }
-header .container-contact .teammember .triple .first li {
-  margin: 10px;
-  list-style: none;
-}
-header .container-contact .teammember .triple .second {
-  display: flex;
-  margin: 20px;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border-radius: 40px;
-  height: 180px;
-  width: 350px;
-}
-@media (max-width: 600px) {
-  header .container-contact .teammember .triple .second {
-    padding-top: 30px;
-    padding-bottom: 50px;
-  }
-}
-header .container-contact .teammember .triple .second img {
-  width: 150px;
-  height: 170px;
-}
-header .container-contact .teammember .triple .second li {
-  margin: 10px;
-  list-style: none;
-}
-header .container-contact .teammember .triple .third {
-  display: flex;
-  margin: 20px;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border-radius: 40px;
-  height: 180px;
-  width: 350px;
-}
-@media (max-width: 600px) {
-  header .container-contact .teammember .triple .third {
-    padding-top: 65px;
-  }
-}
-header .container-contact .teammember .triple .third img {
-  width: 150px;
-  height: 170px;
-}
-header .container-contact .teammember .triple .third li {
+header .container-contact .team-member .triple .column .name {
   margin: 10px;
   list-style: none;
 }
 header .container-contact .duo {
-  margin: 200px 0px 150px 0px;
+  margin: 200px 0 150px 0;
   justify-content: space-between;
   display: flex;
   align-items: center;
@@ -1112,7 +1065,7 @@ footer .right p {
   box-sizing: border-box;
   text-decoration: none;
   color: #121619;
-  margin: 0px;
+  margin: 0;
 }
 
 html {
@@ -1123,7 +1076,7 @@ body {
   background-color: #EBFFF8;
 }
 body .title {
-  padding: 150px 0px;
+  padding: 150px 0;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
@@ -1178,7 +1131,7 @@ body .title .decoration-3 {
   width: 90px;
   border-radius: 40px 0 0 40px;
   bottom: 510px;
-  right: 0px;
+  right: 0;
   z-index: -1;
 }
 @media (max-width: 600px) {
@@ -1428,8 +1381,8 @@ nav .nav #nav-check {
   nav .nav .nav-btn {
     display: inline-block;
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 0;
+    top: 0;
     padding-top: 20px;
   }
   nav .nav .nav-btn label {
@@ -1454,8 +1407,8 @@ nav .nav #nav-check {
     transition: all 0.3s ease-in;
     overflow-y: hidden;
     top: 60px;
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
   }
   nav .nav .nav-links a {
     display: block;
@@ -1466,7 +1419,7 @@ nav .nav #nav-check {
     z-index: 1;
   }
   nav .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
+    height: 0;
   }
   nav .nav > #nav-check:checked ~ .nav-links {
     height: max-content;

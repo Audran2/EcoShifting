@@ -1,7 +1,8 @@
 header{
-    margin: 0px 80px;
+    margin: 0 80px;
+    //noinspection SassScssResolvedByNameOnly
     @include for-mobile{
-        margin: 0px 15px;
+        margin: 0 15px;
     }
 
     //Home page//
@@ -11,8 +12,9 @@ header{
             div{
                 .deco1{
                     position: absolute;
-                    top: 50;
-                    left: -300;
+                    top: 50px;
+                    left: -50px;
+                    //noinspection SassScssResolvedByNameOnly
                     @include for-mobile{
                         display: none;
                     }
@@ -24,6 +26,7 @@ header{
                     position: absolute;
                     z-index: 1;
                     opacity: 0.8;
+                    //noinspection SassScssResolvedByNameOnly
                     @include for-mobile{
                         display: none;
                     }
@@ -35,6 +38,7 @@ header{
                     position: absolute;
                     z-index: 1;
                     opacity: 0.9;
+                    //noinspection SassScssResolvedByNameOnly
                     @include for-mobile{
                         display: none;
                     }
@@ -46,6 +50,7 @@ header{
                     position: absolute;
                     z-index: 1;
                     opacity: 0.8;
+                    //noinspection SassScssResolvedByNameOnly
                     @include for-mobile{
                         display: none;
                     }
@@ -57,6 +62,7 @@ header{
                     position: absolute;
                     z-index: 1;
                     opacity: 0.8;
+                    //noinspection SassScssResolvedByNameOnly
                     @include for-mobile{
                         display: none;
                     }
@@ -72,6 +78,7 @@ header{
             width: 450px;
             margin-left: auto;
             margin-right: auto;
+            //noinspection SassScssResolvedByNameOnly
             @include for-mobile{
                 width: 100%;
             }
@@ -92,6 +99,7 @@ header{
                 width: 50px;
                 height: 50px;
                 animation: updown 2s ease infinite;
+                //noinspection SassScssResolvedByNameOnly
                 @include for-mobile{
                     margin-left: 43%;
                     padding-bottom: 20px;
@@ -301,13 +309,15 @@ header{
                         left: 10px;
                         animation: mouvepre 2s ease infinite ;
                     }
-                    
+
+                    //noinspection CssUnknownProperty
                     @keyframes mouvenext {
                         0%{-webkit-transform: translateX(0);}
                         50% {-webkit-transform: translateX(15px);}
                         100%{-webkit-transform: translateX(0);}
                     }
-                   
+
+                    //noinspection CssUnknownProperty
                     @keyframes mouvepre {
                         0%{-webkit-transform: translateX(0);}
                         50% {-webkit-transform: translateX(-15px);}
@@ -384,11 +394,11 @@ header{
             input {
               margin: 0 auto;
               font-family: $secondary-font;
-              font-style: 20px;
+              font-size: 20px;
               width: 500px;
               height: 40px;
               background-color: transparent;
-              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+              box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
               border-radius: 45px;
               border: $border;
               outline: none;
@@ -487,7 +497,7 @@ header{
             width: 900px;
             border-radius: 20px;
             backdrop-filter: blur(10px);
-            box-shadow: 20px 20px 40px -6px rgb a(0,0,0,0.2);
+            box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
             text-align: center;
             position: relative;
         }
@@ -652,7 +662,7 @@ header{
                     text-align: justify;
                     padding-top: 30px;
                     @include for-mobile{
-                        margin: 0px;
+                        margin: 0;
                         width: 100%;
                         padding-bottom: 50px;
                     }
@@ -675,7 +685,7 @@ header{
 
         // second block (team member)
 
-        .teammember{
+        .team-member{
             padding-top: 200px;
             color: $colortext;
             @include for-mobile{
@@ -695,7 +705,7 @@ header{
                     flex-wrap: wrap;
 
                 }
-                .first{
+                .column{
                     display: flex;
                     margin: 20px;
                     flex-direction: column;
@@ -711,50 +721,7 @@ header{
                         width: 150px;
                         height: 170px;
                     }
-                    li{
-                        margin: 10px;
-                        list-style: none;
-                    }
-                }
-                .second{
-                    display: flex;
-                    margin: 20px;
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
-                    border-radius: 40px;
-                    height: 180px;
-                    width: 350px;
-                    @include for-mobile{
-                        padding-top: 30px;
-                        padding-bottom: 50px;
-                    }
-                    img{
-                        width: 150px;
-                        height: 170px;
-                    }
-                    li{
-                        margin: 10px;
-                        list-style: none;
-                    }
-                }
-                .third{
-                    display: flex;
-                    margin: 20px;
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
-                    border-radius: 40px;
-                    height: 180px;
-                    width: 350px;
-                    @include for-mobile{
-                        padding-top: 65px;
-                    }
-                    img{
-                        width: 150px;
-                        height: 170px;
-                    }
-                    li{
+                    .name{
                         margin: 10px;
                         list-style: none;
                     }
@@ -765,7 +732,7 @@ header{
         // third block (contact form + CO2 & telework page redirection)
 
         .duo{
-            margin: 200px 0px 150px 0px;
+            margin: 200px 0 150px 0;
             justify-content: space-between;
             display: flex;
             align-items: center;

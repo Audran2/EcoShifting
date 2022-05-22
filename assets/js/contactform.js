@@ -1,5 +1,6 @@
 // function to show the message
 // create a constant for "help" elements then writes the selected message
+// noinspection RegExpSimplifiable,JSUnnecessarySemicolon,JSIgnoredPromiseFromCall
 
 function showMessage(input, message, type) {
 	const msg = input.parentNode.querySelector("#help");
@@ -8,16 +9,16 @@ function showMessage(input, message, type) {
 	return type;
 }
 
-// function to show an error 
+// function to show an error
 // create to return the selected message when the function is called in another function
-// return false to permite to activate css
+// return false to permit to activate css
 
 function error(input, message) {
 	return showMessage(input, message, false);
 }
 
 // function to show a success
-// return true to permite to active css
+// return true to permit to active css
 
 function success(input) {
 	return showMessage(input, "", true);
@@ -28,7 +29,7 @@ function success(input) {
 // If the input contains an element, it returns to the success function  
 
 function hasValue(input, message) {
-	// the trim() method permite to remove the space before and after an input
+	// the trim() method permit to remove the space before and after an input
 	if (input.value.trim() === "") {
 		return error(input, message);
 	}
@@ -72,7 +73,7 @@ const COMMENT_INVALID = "Please enter a correct comment format";
 const nameRegex = 
 	/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/
 const emailRegex =
-	/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const commentRegex =
 	/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/;
 
@@ -91,11 +92,11 @@ form.addEventListener("submit", function (event) {
 	let emailValid = validation(form.elements["email"], EMAIL_REQUIRED, EMAIL_INVALID, emailRegex);
     let commentValid = validation(form.elements["comment"], COMMENT_REQUIRED, COMMENT_INVALID, commentRegex);
 
-	//if all the information is good, we send them on the excel, we write a message of reception and we reset the inputs
+	//if all the information is good, we send them on the Excel, we write a message of reception, and we reset the inputs
 	
 	if (fnameValid && nameValid && emailValid && commentValid) {
 		fetch(scriptURL, { method: 'POST', body: new FormData(form)});
-		var div = document.getElementById('success');
+		const div = document.getElementById('success');
       	div.innerHTML = 'Thank you. Your information has been taken into account';
 		$('#contactus')[0].reset();
 	};
