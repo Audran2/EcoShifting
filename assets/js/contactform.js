@@ -1,8 +1,8 @@
 // function to show the message
 // create a constant for "help" elements then writes the selected message
 
-function message(input, message, type) {
-	const msg = input.parentNode.querySelector("help");
+function showMessage(input, message, type) {
+	const msg = input.parentNode.querySelector("#help");
 	msg.innerText = message;
 	input.className = type ? "success" : "error";
 	return type;
@@ -13,14 +13,14 @@ function message(input, message, type) {
 // return false to permite to activate css
 
 function error(input, message) {
-	return message(input, message, false);
+	return showMessage(input, message, false);
 }
 
 // function to show a success
 // return true to permite to active css
 
 function success(input) {
-	return message(input, "", true);
+	return showMessage(input, "", true);
 }
 
 // function to analyze the content of an input

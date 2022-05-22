@@ -897,7 +897,7 @@ header .container-contact .duo #contactus .field select[type=submit]:hover,
 header .container-contact .duo #contactus .field input[type=submit]:hover {
   cursor: pointer;
 }
-header .container-contact .duo #contactus .field small {
+header .container-contact .duo #contactus .field #help {
   color: #dc3545;
 }
 header .container-contact .duo #contactus .field #success {
