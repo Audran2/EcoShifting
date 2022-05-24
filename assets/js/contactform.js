@@ -1,6 +1,6 @@
 // function to show the message
 // create a constant for "help" elements then writes the selected message
-// noinspection RegExpSimplifiable,JSUnnecessarySemicolon,JSIgnoredPromiseFromCall
+// noinspection RegExpSimplifiable,JSUnnecessarySemicolon,JSIgnoredPromiseFromCall,JSUnresolvedFunction
 
 function showMessage(input, message, type) {
 	const msg = input.parentNode.querySelector("#help");
@@ -75,7 +75,7 @@ const nameRegex =
 const emailRegex =
 	/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const commentRegex =
-	/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/;
+	/^[a-zA-Z\s]*$/g;
 
 // added an event listener on the form button
 

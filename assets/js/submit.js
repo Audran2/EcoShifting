@@ -1,5 +1,5 @@
 // setup jquery
-// noinspection JSJQueryEfficiency,JSDeprecatedSymbols,JSUnresolvedVariable
+// noinspection JSJQueryEfficiency,JSDeprecatedSymbols,JSUnresolvedVariable,JSCheckFunctionSignatures,JSUnresolvedFunction
 
 $(document).ready(function() {
 
