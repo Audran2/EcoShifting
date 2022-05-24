@@ -23,6 +23,14 @@ header{
                         display: none;
                     }
                 }
+                .deco2{
+                    position: absolute;
+                    top: -200px;
+                    left: 900px;
+                    @include for-mobile{
+                        display: none;
+                    }
+                }
                 .deco3{
                     top: -200px;
                     left: 360px;
@@ -349,18 +357,18 @@ header{
                     font-size: 40px;
                     padding-bottom: 70px;
                 }
-                .feuille{
+                .leaf{
                     margin-top: -170px;
                     width: 150px;
                     @include for-mobile{
                         display: none;
                     }
                 }
-                #feuille1{
+                #leaf1{
                     margin-right: -40px;
                     z-index: -1;
                 }
-                #feuille2{
+                #leaf2{
                     margin-left: -70px;
                     z-index: -1;
                 }
@@ -370,18 +378,18 @@ header{
                 align-items: center;
                 justify-content: center;    
                 display: flex;
-                .feuille{
+                .leaf{
                     width: 150px;
                     margin-top: 100px;
                     @include for-mobile{
                         display: none;
                     }
                 }
-                #feuille3{
+                #leaf3{
                     margin-right: -40px;
                     z-index: -1;
                 }
-                #feuille4{
+                #leaf4{
                     margin-left: -40px;
                     z-index: -1;
                 }

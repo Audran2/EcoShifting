@@ -20,6 +20,16 @@ header .container-home #scene div .deco1 {
     display: none;
   }
 }
+header .container-home #scene div .deco2 {
+  position: absolute;
+  top: -200px;
+  left: 900px;
+}
+@media (max-width: 600px) {
+  header .container-home #scene div .deco2 {
+    display: none;
+  }
+}
 header .container-home #scene div .deco3 {
   top: -200px;
   left: 360px;
@@ -288,7 +298,7 @@ header .container-home .section-telework .left .slideshow-container .prev, heade
   position: absolute;
   top: 50%;
   padding: 16px;
-  color: rgb(255, 255, 255);
+  color: white;
   margin-top: -22px;
   font-weight: bold;
   font-size: 40px;
@@ -357,20 +367,20 @@ header .container-home section .believe h3 {
   font-size: 40px;
   padding-bottom: 70px;
 }
-header .container-home section .believe .feuille {
+header .container-home section .believe .leaf {
   margin-top: -170px;
   width: 150px;
 }
 @media (max-width: 600px) {
-  header .container-home section .believe .feuille {
+  header .container-home section .believe .leaf {
     display: none;
   }
 }
-header .container-home section .believe #feuille1 {
+header .container-home section .believe #leaf1 {
   margin-right: -40px;
   z-index: -1;
 }
-header .container-home section .believe #feuille2 {
+header .container-home section .believe #leaf2 {
   margin-left: -70px;
   z-index: -1;
 }
@@ -379,20 +389,20 @@ header .container-home section .believe2 {
   justify-content: center;
   display: flex;
 }
-header .container-home section .believe2 .feuille {
+header .container-home section .believe2 .leaf {
   width: 150px;
   margin-top: 100px;
 }
 @media (max-width: 600px) {
-  header .container-home section .believe2 .feuille {
+  header .container-home section .believe2 .leaf {
     display: none;
   }
 }
-header .container-home section .believe2 #feuille3 {
+header .container-home section .believe2 #leaf3 {
   margin-right: -40px;
   z-index: -1;
 }
-header .container-home section .believe2 #feuille4 {
+header .container-home section .believe2 #leaf4 {
   margin-left: -40px;
   z-index: -1;
 }
