@@ -14,9 +14,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@500&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script async
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrFscywJGn02AB0ALLId4oOE1gJoamREE&libraries=places&callback=initAutocomplete">
-    </script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrFscywJGn02AB0ALLId4oOE1gJoamREE&libraries=places&callback=initAutocomplete"></script>
+    <style>
+        body{
+            background-color: #EBFFF8;
+        }
+        table {
+            margin-top: 50px;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #C072BB;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #7EC885;
+        }
+        #output p{
+            display: none;
+        }
+        #table{
+            padding: 0 100px;
+        }
+        input{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -41,7 +69,7 @@
             </div>
         </div>
         <div class="formCalc">
-            <form>
+            <form action="#">
                 <div class="form-group">
                     <label for="input-start">START ADDRESS</label><br>
                     <input class="inputStartAddress" id="input-start" type="address" required>
@@ -50,17 +78,20 @@
                     <label for="input-end">END ADDRESS</label><br>
                     <input class="inputEndAddress" id="input-end" type="address" required>
                 </div>
-        
-                <div class="form-group">
-                    <label for="input-vehicle">VEHICULE</label><br>
-                    <input class="inputVehicle" id="input-vehicle" type="text" required>
-                </div>
                 <div class="submit">
                     <input id="submit" type="submit" value="Submit">
                 </div>
             </form>
         </div>
     </header>
+    <div id="output">
+        <p id="1"></p>
+        <p id="2"></p>
+        <p id="msg"></p>
+        <div id="table">
+
+        </div>
+    </div>
     <section class="teleworkco">
         <h2>Lets calculate your carbon footprint for telework</h2>
         <p>To deepen your carbone footprint analyse you can try this other feature. That calculate you how many Co2 you will consume for each of your daily travel and also how to reduce it with a different way to do it </p>
@@ -81,5 +112,7 @@
 <script src="assets/js/submit.js"></script>
 <script src="assets/js/utils.js"></script>
 <script src="assets/js/map.js"></script>
+<script src="assets/js/utils.js"></script>
+
 </body>
 </html>

@@ -1,17 +1,10 @@
-/*import all scss file in one*/
 header {
-  margin: 0px 80px;
+  margin: 0 80px;
 }
 @media (max-width: 600px) {
   header {
-    margin: 0px 15px;
+    margin: 0 15px;
   }
-}
-header .container-home #nuage {
-  position: absolute;
-  top: 1400px;
-  right: 300px;
-  opacity: 0.9;
 }
 header .container-home #scene div .cloud {
   animation: vent 4s ease infinite;
@@ -19,7 +12,8 @@ header .container-home #scene div .cloud {
 }
 header .container-home #scene div .deco1 {
   position: absolute;
-  top: 0;
+  top: 50px;
+  left: -50px;
 }
 @media (max-width: 600px) {
   header .container-home #scene div .deco1 {
@@ -36,16 +30,6 @@ header .container-home #scene div .deco3 {
     display: none;
   }
 }
-header .container-home #scene div .deco2 {
-  top: -150px;
-  left: 1000px;
-  opacity: 0.8;
-}
-@media (max-width: 600px) {
-  header .container-home #scene div .deco2 {
-    display: none;
-  }
-}
 header .container-home #scene div .deco4 {
   top: 150px;
   left: 500px;
@@ -57,8 +41,10 @@ header .container-home #scene div .deco4 {
   }
 }
 header .container-home #scene div .deco5 {
-  top: 60px;
-  left: 1300px;
+  top: 150px;
+  left: 950px;
+  position: absolute;
+  z-index: 1;
   opacity: 0.8;
 }
 @media (max-width: 600px) {
@@ -244,6 +230,7 @@ header .container-home .section-telework .left .slideshow-container .infos {
 }
 @media (max-width: 600px) {
   header .container-home .section-telework .left .slideshow-container .infos {
+    left: 60%;
     bottom: 50%;
   }
 }
@@ -288,6 +275,7 @@ header .container-home .section-telework .left .slideshow-container .mySlides {
 header .container-home .section-telework .left .slideshow-container .mySlides img {
   width: 600px;
   height: 400px;
+  border-radius: 30px;
 }
 @media (max-width: 600px) {
   header .container-home .section-telework .left .slideshow-container .mySlides img {
@@ -354,7 +342,7 @@ header .container-home section {
 @media (max-width: 600px) {
   header .container-home section {
     margin: 0 auto;
-    padding-top: 430px;
+    padding-top: 150px;
   }
 }
 header .container-home section .believe {
@@ -462,11 +450,11 @@ header .formCalc form .form-group label {
 header .formCalc form .form-group input {
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
-  font-style: 20px;
+  font-size: 20px;
   width: 500px;
   height: 40px;
   background-color: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 45px;
   border: 2px solid #C072BB;
   outline: none;
@@ -499,6 +487,29 @@ header .formCalc form .submit input {
 }
 header .formCalc form .submit input:hover {
   background-color: #C072BB;
+}
+header table {
+  margin-top: 50px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+header td, header th {
+  border: 1px solid #C072BB;
+  text-align: left;
+  padding: 8px;
+}
+header tr:nth-child(even) {
+  background-color: #7EC885;
+}
+header #output p {
+  display: none;
+}
+header #table {
+  padding: 0 100px;
+}
+header input {
+  text-align: center;
 }
 header .container-telework .whytelework {
   padding-top: 50px;
@@ -561,7 +572,7 @@ header .container-telework form {
   width: 900px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
-  box-shadow: 20px 20px 40px -6px rgb a(0, 0, 0, 0.2);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
   text-align: center;
   position: relative;
 }
@@ -577,113 +588,11 @@ header .container-telework .drop {
   }
 }
 header .container-telework .drop-1 {
-  background-color: #2c6330;
-  height: 200px;
-  width: 200px;
-  top: 1250px;
-  left: 150px;
-  z-index: -1;
-}
-header .container-telework .drop-2 {
-  background-color: #7EC885;
-  height: 70px;
-  width: 70px;
-  bottom: -450px;
-  right: 850px;
-  z-index: -1;
-}
-header .container-telework .drop-3 {
-  background-color: #7EC885;
-  height: 120px;
-  width: 120px;
-  top: 1450px;
-  right: 170px;
-}
-header .container-telework .drop-4 {
-  background-color: #2c6330;
-  height: 120px;
-  width: 120px;
-  bottom: -725px;
-  left: 850px;
-}
-header .container-telework .drop-5 {
-  background-color: #7EC885;
-  height: 50px;
-  width: 50px;
-  bottom: -600px;
-  left: 1100px;
-}
-header .container-telework .drop-6 {
-  background-color: #7EC885;
-  height: 250px;
-  width: 250px;
-  bottom: -1250px;
-  left: 100px;
-}
-header .container-telework .drop-7 {
-  background-color: #2c6330;
-  height: 120px;
-  width: 120px;
-  bottom: -1750px;
-  left: 300px;
-}
-header .container-telework .drop-8 {
-  background-color: #2c6330;
-  height: 180px;
-  width: 180px;
-  bottom: -1200px;
-  left: 1150px;
-  z-index: -1;
-}
-header .container-telework .drop-9 {
-  background-color: #7EC885;
-  height: 140px;
-  width: 140px;
-  bottom: -1750px;
-  left: 1150px;
-}
-header .container-telework .drop-10 {
-  background-color: #2c6330;
-  height: 80px;
-  width: 80px;
-  bottom: -2000px;
-  left: 850px;
-  z-index: -1;
-}
-header .container-telework .drop-11 {
-  background-color: #7EC885;
-  height: 100px;
-  width: 100px;
-  bottom: -1920px;
-  left: 450px;
-}
-header .container-telework .drop-12 {
-  background-color: #2c6330;
-  height: 60px;
-  width: 60px;
-  bottom: -1870px;
-  left: 1350px;
-}
-header .container-telework .drop-13 {
-  background-color: #7EC885;
-  height: 55px;
-  width: 55px;
-  bottom: -1700px;
-  left: 100px;
-}
-header .container-telework .drop-14 {
-  background-color: #2c6330;
-  height: 60px;
-  width: 60px;
-  bottom: -500px;
-  left: 100px;
-}
-header .container-telework .drop-15 {
-  background-color: #7EC885;
-  height: 70px;
-  width: 70px;
-  bottom: -1000px;
-  left: 1350px;
+  background-color: white;
+  height: 35px;
+  width: 550px;
+  bottom: -765px;
+  left: 500px;
 }
 header .container-telework a,
 header .container-telework input:focus,
@@ -728,7 +637,7 @@ header .container-contact .presentation .text p {
 }
 @media (max-width: 600px) {
   header .container-contact .presentation .text p {
-    margin: 0px;
+    margin: 0;
     width: 100%;
     padding-bottom: 50px;
   }
@@ -748,32 +657,32 @@ header .container-contact .presentation .photo {
     margin-top: 150px;
   }
 }
-header .container-contact .teammember {
+header .container-contact .team-member {
   padding-top: 200px;
   color: #121619;
 }
 @media (max-width: 600px) {
-  header .container-contact .teammember {
+  header .container-contact .team-member {
     padding-top: 150px;
   }
 }
-header .container-contact .teammember h2 {
+header .container-contact .team-member h2 {
   display: flex;
   justify-content: center;
 }
-header .container-contact .teammember .triple {
+header .container-contact .team-member .triple {
   padding-top: 50px;
   justify-content: space-between;
   display: flex;
   align-items: center;
 }
 @media (max-width: 600px) {
-  header .container-contact .teammember .triple {
+  header .container-contact .team-member .triple {
     width: 100%;
     flex-wrap: wrap;
   }
 }
-header .container-contact .teammember .triple .first {
+header .container-contact .team-member .triple .column {
   display: flex;
   margin: 20px;
   flex-direction: column;
@@ -784,67 +693,20 @@ header .container-contact .teammember .triple .first {
   width: 350px;
 }
 @media (max-width: 600px) {
-  header .container-contact .teammember .triple .first {
+  header .container-contact .team-member .triple .column {
     padding-bottom: 50px;
   }
 }
-header .container-contact .teammember .triple .first img {
+header .container-contact .team-member .triple .column img {
   width: 150px;
   height: 170px;
 }
-header .container-contact .teammember .triple .first li {
-  margin: 10px;
-  list-style: none;
-}
-header .container-contact .teammember .triple .second {
-  display: flex;
-  margin: 20px;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border-radius: 40px;
-  height: 180px;
-  width: 350px;
-}
-@media (max-width: 600px) {
-  header .container-contact .teammember .triple .second {
-    padding-top: 30px;
-    padding-bottom: 50px;
-  }
-}
-header .container-contact .teammember .triple .second img {
-  width: 150px;
-  height: 170px;
-}
-header .container-contact .teammember .triple .second li {
-  margin: 10px;
-  list-style: none;
-}
-header .container-contact .teammember .triple .third {
-  display: flex;
-  margin: 20px;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border-radius: 40px;
-  height: 180px;
-  width: 350px;
-}
-@media (max-width: 600px) {
-  header .container-contact .teammember .triple .third {
-    padding-top: 65px;
-  }
-}
-header .container-contact .teammember .triple .third img {
-  width: 150px;
-  height: 170px;
-}
-header .container-contact .teammember .triple .third li {
+header .container-contact .team-member .triple .column .name {
   margin: 10px;
   list-style: none;
 }
 header .container-contact .duo {
-  margin: 200px 0px 150px 0px;
+  margin: 200px 0 150px 0;
   justify-content: space-between;
   display: flex;
   align-items: center;
@@ -871,7 +733,7 @@ header .container-contact .duo #contactus {
   background: rgba(255, 255, 255, 0.3);
   padding: 2em;
   width: 380px;
-  height: 490px;
+  height: 580px;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
@@ -901,6 +763,20 @@ header .container-contact .duo #contactus a {
 header .container-contact .duo #contactus .field {
   height: 95px;
 }
+header .container-contact .duo #contactus .field select {
+  width: 270px;
+  padding: 0.6em;
+}
+header .container-contact .duo #contactus .field select:focus {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 600px) {
+  header .container-contact .duo #contactus .field select {
+    width: 230px;
+  }
+}
+header .container-contact .duo #contactus .field select,
 header .container-contact .duo #contactus .field input {
   background: transparent;
   border: 2px solid #C072BB;
@@ -913,36 +789,43 @@ header .container-contact .duo #contactus .field input {
   text-align: center;
 }
 @media (max-width: 600px) {
-  header .container-contact .duo #contactus .field input {
+  header .container-contact .duo #contactus .field select,
+header .container-contact .duo #contactus .field input {
     backdrop-filter: none;
   }
 }
+header .container-contact .duo #contactus .field select:hover,
 header .container-contact .duo #contactus .field input:hover {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
 }
+header .container-contact .duo #contactus .field select[type=text],
 header .container-contact .duo #contactus .field input[type=text] {
-  width: 280px;
-  padding: 0.7em;
+  width: 270px;
+  padding: 0.6em;
 }
+header .container-contact .duo #contactus .field select[type=text]:focus,
 header .container-contact .duo #contactus .field input[type=text]:focus {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 600px) {
-  header .container-contact .duo #contactus .field input[type=text] {
+  header .container-contact .duo #contactus .field select[type=text],
+header .container-contact .duo #contactus .field input[type=text] {
     width: 230px;
   }
 }
+header .container-contact .duo #contactus .field select[type=submit],
 header .container-contact .duo #contactus .field input[type=submit] {
   padding: 0.2em;
   width: 120px;
   font-size: 0.8rem;
 }
+header .container-contact .duo #contactus .field select[type=submit]:hover,
 header .container-contact .duo #contactus .field input[type=submit]:hover {
   cursor: pointer;
 }
-header .container-contact .duo #contactus .field small {
+header .container-contact .duo #contactus .field #help {
   color: #dc3545;
 }
 header .container-contact .duo #contactus .field #success {
@@ -1057,6 +940,15 @@ header .container-contact .duo .text .twobutton .button {
     width: 250px;
   }
 }
+header .container-consent .legal-mention {
+  margin: auto;
+  width: 70%;
+}
+header .container-consent .legal-mention p {
+  text-indent: 60px;
+  text-align: justify;
+  padding-bottom: 25px;
+}
 
 footer {
   background-color: #121619;
@@ -1148,7 +1040,7 @@ footer .right p {
   box-sizing: border-box;
   text-decoration: none;
   color: #121619;
-  margin: 0px;
+  margin: 0;
 }
 
 html {
@@ -1159,7 +1051,7 @@ body {
   background-color: #EBFFF8;
 }
 body .title {
-  padding: 150px 0px;
+  padding: 150px 0;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
@@ -1214,7 +1106,7 @@ body .title .decoration-3 {
   width: 90px;
   border-radius: 40px 0 0 40px;
   bottom: 510px;
-  right: 0px;
+  right: 0;
   z-index: -1;
 }
 @media (max-width: 600px) {
@@ -1260,8 +1152,8 @@ body .button::before,
 body .button::after {
   position: absolute;
   content: "";
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background: #C072BB;
   top: 50%;
   border-radius: 50%;
@@ -1464,8 +1356,8 @@ nav .nav #nav-check {
   nav .nav .nav-btn {
     display: inline-block;
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 0;
+    top: 0;
     padding-top: 20px;
   }
   nav .nav .nav-btn label {
@@ -1490,8 +1382,8 @@ nav .nav #nav-check {
     transition: all 0.3s ease-in;
     overflow-y: hidden;
     top: 60px;
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
   }
   nav .nav .nav-links a {
     display: block;
@@ -1502,7 +1394,7 @@ nav .nav #nav-check {
     z-index: 1;
   }
   nav .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
+    height: 0;
   }
   nav .nav > #nav-check:checked ~ .nav-links {
     height: max-content;

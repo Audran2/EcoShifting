@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+<!--suppress JSUnresolvedFunction -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco· shifting | Home</title>
+    <title>Eco· shifting</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +18,16 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-
+    <!-- beginning header -->
     <header>
+        <!-- parallax title -->
         <div class="container-home">
             <div id="scene">
-                <div data-depth="0.6"><img  src="assets\img\cloud.png" alt="" class="cloud deco3"></div>
-                <div data-depth="0.2"><img src="assets\img\cloud.png" alt="" class="cloud deco2"></div>
-                <div data-depth="0.1"><img src="assets\img\cloud.png" alt="" class="cloud deco1"></div>
-                <div data-depth="0.3"><img src="assets\img\cloud.png" alt="" class="cloud deco4"></div>
-                <div data-depth="0.5"><img src="assets\img\cloud.png" alt="" class="cloud deco5"></div>
-
+                <div data-depth="0.4"><img src="assets/img/cloud.png" alt="" class="cloud deco1"></div>
+                <div data-depth="0.6"><img src="assets/img/cloud.png" alt="" class="cloud deco2"></div>
+                <div data-depth="0.2"><img  src="assets/img/cloud.png" alt="" class="cloud deco3"></div>
+                <div data-depth="0.3"><img src="assets/img/cloud.png" alt="" class="cloud deco4"></div>
+                <div data-depth="0.5"><img src="assets/img/cloud.png" alt="" class="cloud deco5"></div>
             </div>
             <h1>Eco· shifting</h1>
 
@@ -34,24 +36,25 @@
                 <a class="button" href="CO2FP.html">Calculate</a>
             </div>
             <a href="#transition">
-                <img src="assets\img\chevron-bottom.png" alt="chevron(bottom)">
+                <img src="assets/img/chevron-bottom.png" alt="chevron(bottom)">
             </a>
             <div id="transition"></div>
-            <!-- section1 -->
+            <!-- first block (CO2 page redirection) -->
             <div class="section-calculator">
                 <div class="left">
                     <h2>CO2 Footprint calculator</h2>
-                    <h3>The best calcultor</h3>
+                    <h3>The best calculator</h3>
                     <p>Concerned about the environment? Discover our online calculator to help you in your everyday travel. As a bonus, tips to lower your carbon footprint without restrain yourself.</p>
                     <a class="button" href="CO2FP.html">Try now</a>
                 </div>
 
                 <div class="right">
-                    <img src="assets\img\footprint.png" alt="carbon footprint" >
+                    <img src="assets/img/footprint.png" alt="carbon footprint">
+
 
                 </div>
             </div>
-            <!-- section2  -->
+            <!-- second block (telework page redirection)  -->
             <div class="section-telework">
                 <div class="left">
                     <div class="slideshow-container">
@@ -59,7 +62,7 @@
                         <!-- Full-width images with number and caption text -->
                         <div class="mySlides fade">
                           <div class="numbertext">01</div>
-                          <img src="assets\img\concerned.avif" >
+                          <img src="assets/img/concerned.jpg" alt="26% of employees concerned">
                           <div class="infos">
                             <h4>26%</h4>
                             <p>Employees concerned</p>
@@ -68,7 +71,7 @@
 
                         <div class="mySlides fade">
                           <div class="numbertext">02</div>
-                          <img src="assets\img\telework.jpg" >
+                          <img src="assets/img/telework.jpg" alt="3 days per week average">
                           <div class="infos">
                             <h4>3 days</h4>
                             <p>Per week average</p>
@@ -78,7 +81,7 @@
 
                         <div class="mySlides fade">
                           <div class="numbertext">03</div>
-                          <img src="assets\img\productive.avif" >
+                          <img src="assets/img/productive.jpg" alt="55% more productive">
                           <div class="infos">
                             <h4>55%</h4>
                             <p>More productive</p>
@@ -92,14 +95,23 @@
                 </div>
                 <div class="right">
                     <h2>Get the best of telework</h2>
-                    <div><img src="assets\img\experience.png" alt="experience"><p>Change your habit</p></div>
-                    <div><img src="assets\img\world.png" alt="Earth"><p>Reduce your carbon footprint</p></div>
-                    <div><img src="assets\img\promotion.png" alt="promotion"><p>Save your money</p></div>
+                    <div>
+                        <img src="assets/img/experience.png" alt="experience">
+                        <p>Change your habit</p>
+                    </div>
+                    <div>
+                        <img src="assets/img/world.png" alt="Earth">
+                        <p>Reduce your carbon footprint</p>
+                    </div>
+                    <div>
+                        <img src="assets/img/promotion.png" alt="promotion">
+                        <p>Save your money</p>
+                    </div>
                     <a class="button" href="telework.html">Try now</a>
                 </div>
 
             </div>
-            <!-- section3  -->
+            <!-- third block (contact page redirection)  -->
             <section id="section3">
                 <div class="believe">
                     <img class="feuille" id="feuille1" src="assets\img\feuille-removebg-preview.png" alt="">
@@ -116,7 +128,8 @@
         </div>
         
     </header>
-    <!-- footer -->
+    <!-- end header -->
+    <!-- importation footer -->
     <footer>
         <div id="footer-placeholder">
 
@@ -128,11 +141,16 @@
         });
         </script>
     </footer>
+<<<<<<< HEAD
 <script src="assets\js\simpleParallax.js"></script>
 <script src="assets\js\parallax.js"></script>
 <script src="assets\js\slider.js"></script>
+=======
+<script src="assets/js/parallax.js"></script>
+<script src="assets/js/slider.js"></script>
+>>>>>>> be3e1c15945d01fa8f2c451399cd835ff4ab79fd
 <script src="assets/js/scroll.js"></script>
-<script src="assets\js\utils.js"></script>
+<script src="assets/js/utils.js"></script>
 
 
 

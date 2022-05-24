@@ -1,3 +1,5 @@
+// noinspection JSUnusedGlobalSymbols,JSUnresolvedFunction
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -39,9 +41,9 @@ function autoSlides() {
 
 
 
-// animation paralax
-var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene, {
+// animation parallax
+const scene = document.getElementById('scene');
+const parallaxInstance = new Parallax(scene, {
   relativeInput: true,
   scalarY: 8,
 });

@@ -1,19 +1,12 @@
 
 header{
-    margin: 0px 80px;
+    margin: 0 80px;
     @include for-mobile{
-        margin: 0px 15px;   
+        margin: 0 15px;
     }
 
     //Home page//
     .container-home{
-        #nuage{
-            position: absolute;
-            top: 1400px;
-            right: 300px;
-            opacity: 0.9;
-        }
-        // Animation nuage
         #scene{
             
             div{
@@ -24,29 +17,16 @@ header{
                
                 .deco1{
                     position: absolute;
-                    top: 0;
-
-                    
-                    
-                    
+                    top: 50px;
+                    left: -50px;
                     @include for-mobile{
                         display: none;
                     }
-                    
                 }
-                
                 .deco3{
                     top: -200px;
                     left: 360px;
                     opacity: 0.9;
-                    @include for-mobile{
-                        display: none;
-                    }
-                }
-                .deco2{
-                    top: -150px;
-                    left: 1000px;
-                    opacity: 0.8;
                     @include for-mobile{
                         display: none;
                     }
@@ -62,8 +42,10 @@ header{
                 }
 
                 .deco5{
-                    top: 60px;
-                    left: 1300px;
+                    top: 150px;
+                    left: 950px;
+                    position: absolute;
+                    z-index: 1;
                     opacity: 0.8;
                     @include for-mobile{
                         display: none;
@@ -85,6 +67,7 @@ header{
             width: 450px;
             margin-left: auto;
             margin-right: auto;
+            //noinspection SassScssResolvedByNameOnly
             @include for-mobile{
                 width: 100%;
             }
@@ -107,6 +90,7 @@ header{
                 width: 50px;
                 height: 50px;
                 animation: updown 2s ease infinite;
+                //noinspection SassScssResolvedByNameOnly
                 @include for-mobile{
                     margin-left: 43%;
                     padding-bottom: 20px;
@@ -130,8 +114,7 @@ header{
             transform: translateY(-40%);
             }
         }
-
-        // 1 section
+        // first block (CO2 page redirection)
 
         .section-calculator{
             margin-top: 300px;
@@ -180,7 +163,8 @@ header{
             }
         }
 
-        // section2
+        // second block (telework page redirection)
+
         .section-telework{
             margin-top: 380px;
             margin-left: auto;
@@ -245,6 +229,7 @@ header{
                             bottom: 55%;
                             left: 66.5%;
                             @include for-mobile{
+                                left: 60%;
                                 bottom: 50%;
                             }
                             
@@ -287,6 +272,7 @@ header{
                         img{
                             width: 600px;
                             height:400px;
+                            border-radius: 30px;
                             @include for-mobile{
                                 width: 100%;
                                 height: auto;
@@ -315,13 +301,15 @@ header{
                         left: 10px;
                         animation: mouvepre 2s ease infinite ;
                     }
-                    
+
+                    //noinspection CssUnknownProperty
                     @keyframes mouvenext {
                         0%{-webkit-transform: translateX(0);}
                         50% {-webkit-transform: translateX(15px);}
                         100%{-webkit-transform: translateX(0);}
                     }
-                   
+
+                    //noinspection CssUnknownProperty
                     @keyframes mouvepre {
                         0%{-webkit-transform: translateX(0);}
                         50% {-webkit-transform: translateX(-15px);}
@@ -342,12 +330,13 @@ header{
             }
         }
 
-        // section 3
+        // third block (contact page redirection)
+
         section{
             margin: 250px 200px;
             @include for-mobile{
                 margin: 0 auto;
-                padding-top: 430px;
+                padding-top: 150px;
             }
             .believe{
                 display: flex;
@@ -375,6 +364,7 @@ header{
                     margin-left: -70px;
                     z-index: -1;
                 }
+
             }
             .believe2{
                 align-items: center;
@@ -445,11 +435,11 @@ header{
             input {
               margin: 0 auto;
               font-family: $secondary-font;
-              font-style: 20px;
+              font-size: 20px;
               width: 500px;
               height: 40px;
               background-color: transparent;
-              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+              box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
               border-radius: 45px;
               border: $border;
               outline: none;
@@ -484,9 +474,37 @@ header{
           }
         }
     }
+    table {
+        margin-top: 50px;
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #C072BB;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #7EC885;
+    }
+    #output p{
+        display: none;
+    }
+    #table{
+        padding: 0 100px;
+    }
+    input{
+        text-align: center;
+    }
 
     //Telework page//
     .container-telework{
+
+        // first block (telework reason)
+        
         .whytelework{
             padding-top: 50px;
             padding-bottom: 50px;
@@ -524,6 +542,9 @@ header{
                 }
             }
         }
+
+        // second block (telework calculator)
+
         .calculator-telework {
             display: flex;
             top: 50%;
@@ -542,7 +563,7 @@ header{
             width: 900px;
             border-radius: 20px;
             backdrop-filter: blur(10px);
-            box-shadow: 20px 20px 40px -6px rgb a(0,0,0,0.2);
+            box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
             text-align: center;
             position: relative;
         }
@@ -556,113 +577,11 @@ header{
             }
 
             &-1 {
-                background-color: $primarycolor;
-                height: 200px;
-                width: 200px;
-                top: 1250px;
-                left: 150px;
-                z-index: -1;
-            }
-            &-2 {
-                background-color: $secondarycolor;
-                height: 70px;
-                width: 70px;
-                bottom: -450px;
-                right: 850px;
-                z-index: -1;
-            }
-            &-3 {
-                background-color: $secondarycolor;
-                height: 120px;
-                width: 120px;
-                top: 1450px;
-                right: 170px;
-            }
-            &-4 {
-                background-color: $primarycolor;
-                height: 120px;
-                width: 120px;
-                bottom: -725px;
-                left: 850px;
-            }
-            &-5 {
-                background-color: $secondarycolor;
-                height: 50px;
-                width: 50px;
-                bottom: -600px;
-                left: 1100px;
-            }
-            &-6 {
-                background-color: $secondarycolor;
-                height: 250px;
-                width: 250px;
-                bottom: -1250px;
-                left: 100px;
-            }
-            &-7 {
-                background-color: $primarycolor;
-                height: 120px;
-                width: 120px;
-                bottom: -1750px;
-                left: 300px;
-            }
-            &-8 {
-                background-color: $primarycolor;
-                height: 180px;
-                width: 180px;
-                bottom: -1200px;
-                left: 1150px;
-                z-index: -1;
-            }
-            &-9 {
-                background-color: $secondarycolor;
-                height: 140px;
-                width: 140px;
-                bottom: -1750px;
-                left: 1150px;
-            }
-            &-10 {
-                background-color: $primarycolor;
-                height: 80px;
-                width: 80px;
-                bottom: -2000px;
-                left: 850px;
-                z-index: -1;
-            }
-            &-11 {
-                background-color: $secondarycolor;
-                height: 100px;
-                width: 100px;
-                bottom: -1920px;
-                left: 450px;
-            }
-            &-12 {
-                background-color: $primarycolor;
-                height: 60px;
-                width: 60px;
-                bottom: -1870px;
-                left: 1350px;
-            }
-            &-13 {
-                background-color: $secondarycolor;
-                height: 55px;
-                width: 55px;
-                bottom: -1700px;
-                left: 100px;
-            }
-            &-14 {
-                background-color: $primarycolor;
-                height: 60px;
-                width: 60px;
-                bottom: -500px;
-                left: 100px;
-            }
-            &-15 {
-                background-color: $secondarycolor;
-                height: 70px;
-                width: 70px;
-                bottom: -1000px;
-                left: 1350px;
+                background-color: white;
+                height: 35px;
+                width: 550px;
+                bottom: -765px;
+                left: 500px;
             }
         }
             a,
@@ -676,6 +595,9 @@ header{
 
     //contact page//
     .container-contact{
+
+        // first block (presentation + picture)
+
         .presentation{
             margin-top: 100px;
             justify-content: space-between;
@@ -704,7 +626,7 @@ header{
                     text-align: justify;
                     padding-top: 30px;
                     @include for-mobile{
-                        margin: 0px;
+                        margin: 0;
                         width: 100%;
                         padding-bottom: 50px;
                     }
@@ -724,7 +646,10 @@ header{
                 }
             }
         }
-        .teammember{
+
+        // second block (team member)
+
+        .team-member{
             padding-top: 200px;
             color: $colortext;
             @include for-mobile{
@@ -744,7 +669,7 @@ header{
                     flex-wrap: wrap;
 
                 }
-                .first{
+                .column{
                     display: flex;
                     margin: 20px;
                     flex-direction: column;
@@ -760,58 +685,18 @@ header{
                         width: 150px;
                         height: 170px;
                     }
-                    li{
-                        margin: 10px;
-                        list-style: none;
-                    }
-                }
-                .second{
-                    display: flex;
-                    margin: 20px;
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
-                    border-radius: 40px;
-                    height: 180px;
-                    width: 350px;
-                    @include for-mobile{
-                        padding-top: 30px;
-                        padding-bottom: 50px;
-                    }
-                    img{
-                        width: 150px;
-                        height: 170px;
-                    }
-                    li{
-                        margin: 10px;
-                        list-style: none;
-                    }
-                }
-                .third{
-                    display: flex;
-                    margin: 20px;
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
-                    border-radius: 40px;
-                    height: 180px;
-                    width: 350px;
-                    @include for-mobile{
-                        padding-top: 65px;
-                    }
-                    img{
-                        width: 150px;
-                        height: 170px;
-                    }
-                    li{
+                    .name{
                         margin: 10px;
                         list-style: none;
                     }
                 }
             }
         }
+
+        // third block (contact form + CO2 & telework page redirection)
+
         .duo{
-            margin: 200px 0px 150px 0px;
+            margin: 200px 0 150px 0;
             justify-content: space-between;
             display: flex;
             align-items: center;
@@ -833,12 +718,13 @@ header{
                 background: $white;
                 padding: 2em;
                 width: 380px;
-                height: 490px;
+                height: 580px;
                 border-radius: 20px;
                 backdrop-filter: blur(10px);
                 box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
                 text-align: center;
                 position: relative;
+                //noinspection SassScssResolvedByNameOnly
                 @include for-mobile{
                     backdrop-filter: none;
                     width: 317px;
@@ -859,6 +745,18 @@ header{
                 }
                 .field{
                     height: 95px;
+                    select{
+                        width: 270px;
+                        padding: 0.6em;
+                        &:focus {
+                            background: rgba(255,255,255,0.1);
+                            box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+                        }
+                        @include for-mobile{
+                            width: 230px;
+                        }
+                    }
+                    select,
                     input {
                         background: transparent;
                         border: $border;
@@ -878,8 +776,8 @@ header{
                         }
 
                         &[type="text"] {
-                            width: 280px;
-                            padding: 0.7em;
+                            width: 270px;
+                            padding: 0.6em;
                             &:focus {
                                 background: rgba(255,255,255,0.1);
                                 box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
@@ -898,7 +796,7 @@ header{
                             }
                         }
                     }
-                    small {
+                    #help {
                         color: #dc3545;
                     }
                     
@@ -1024,6 +922,17 @@ header{
 
     }
 
+    // consent page
+
+    .container-consent {
+        .legal-mention {
+            margin: auto;
+            width: 70%;
+            p {
+                text-indent: 60px;
+                text-align: justify;
+                padding-bottom: 25px;
+            }
+        }
+    }
 }
-
-

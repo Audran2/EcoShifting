@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+<!--suppress XmlDuplicatedId, JSUnresolvedFunction -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eco· shifting | Contact us</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +19,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
+    <!-- importation nav menu -->
     <nav>
         <div id="nav-placeholder">
 
@@ -28,9 +31,11 @@
         });
         </script> 
     </nav>
+    <!-- beginning header -->
     <header>
         <div class="title">
             <h1>Contact us</h1>
+            <!-- square decoration -->
             <div class="drops">
                 <div class="decoration decoration-1"></div>
                 <div class="decoration decoration-2"></div>
@@ -39,6 +44,7 @@
             </div>
         </div>
         <div class="container-contact">
+            <!-- first block (presentation + picture) -->
             <div class="presentation"> 
                 <div class="text">
                     <h2>Who are we ?</h2>
@@ -50,52 +56,67 @@
                     <img src="assets/img/society.jpg" alt="society">
                 </div>
             </div>
-            <div class="teammember" >   
-                <h2 >Team member</h2>       
-                <div class="triple" >
-                    <div class="first">
-                        <img id="Audran" src="assets/img/iconmember.png" alt="Audran">
-                        <li>Audran MASSACRY</li>
-                        <p>--------</p>
+            <!-- second block (team member) -->
+            <div class="team-member">
+                <h2>Team member</h2>       
+                <div class="triple">
+                    <div class="column">
+                        <img src="assets/img/iconmember.png" alt="Audran">
+                        <a class="name">Audran MASSACRY</a>
+                        <a href="mailto:audran.massacry@next-u.fr">audran.massacry@next-u.fr</a>
                     </div>
-                    <div class="second">
-                        <img id="Liam" src="assets/img/iconmember.png" alt="Liam">
-                        <li>Liam DESRAYAUD</li>
-                        <p>--------</p>
+                    <div class="column">
+                        <img src="assets/img/iconmember.png" alt="Liam">
+                        <a class="name">Liam DESRAYAUD</a>
+                        <a href="mailto:liam.desrayaud@next-u.fr">liam.desrayaud@next-u.fr</a>
                     </div>
-                    <div class="third" >
-                        <img id="Julien" src="assets/img/iconmember.png" alt="Julien">
-                        <li>Julien SABOURIN</li>
-                        <p>--------</p>
+                    <div class="column">
+                        <img src="assets/img/iconmember.png" alt="Julien">
+                        <a class="name">Julien SABOURIN</a>
+                        <a href="mailto:julien.sabourin@next-u.fr">julien.sabourin@next-u.fr</a>
                     </div>
                 </div>
             </div>
+            <!-- third block (contact form + CO2 & telework page redirection) -->
             <div class="duo"> 
                 <div class="container">
+                    <!-- form -->
                     <form id="contactus" name="contactus">
                         <div class="field">
                             <label for="fname">First name:</label>
                             <input type="text" id="fname" name="fname" placeholder="Enter your first name">
-                            <small></small>
+                            <!--suppress XmlDuplicatedId -->
+                            <div id="help"></div>
                         </div>
                         <div class="field">
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" placeholder="Enter your full name">
-                            <small></small>
+                            <div id="help"></div>
                         </div>
                         <div class="field">
                             <label for="email">Email address:</label>
-                            <input type="text" id="email" name="email"placeholder="Enter your email address">
-                            <small></small>
+                            <input type="text" id="email" name="email" placeholder="Enter your email address">
+                            <div id="help"></div>
+                        </div>
+                        <div class="field">
+                            <label for="type">Who are you:</label>
+                            <select id="type" name="type">
+                                <option value="individual">Individual</option>
+                                <option value="professional">Professional</option>
+                                <option value="public service">Public service</option>
+                            </select>
                         </div>
                         <div class="field">
                             <label for="comment">Comment:</label>
                             <input type="text" id="comment" name="comment" placeholder="Enter your comment">
-                            <small></small>
+                            <div id="help"></div>
                         </div>
                         <div class="field">
                             <input type="submit" value="Send">
                             <div id="success"> </div>
+                        </div>
+                        <div id="information">
+                            <a href="consent.html">We agree with your terms of use</a>
                         </div>
                     </form>
                 
@@ -120,6 +141,8 @@
             </div>
         </div>
     </header>
+    <!-- end header -->
+    <!-- importation footer -->
     <footer> 
         <div id="footer-placeholder">
 

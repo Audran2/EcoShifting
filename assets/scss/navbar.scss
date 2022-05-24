@@ -8,6 +8,7 @@ nav {
     z-index: +1;
     .nav-header {
       display: inline;
+      //noinspection SassScssResolvedByNameOnly
       .nav-title {
         display: inline-block;
         font-size: 35px;
@@ -27,6 +28,8 @@ nav {
       float: right;
       font-size: 18px;
     }
+
+    //noinspection SassScssResolvedByNameOnly
     a {
       display: inline-block;
       padding: 13px 10px 0 10px;
@@ -35,19 +38,22 @@ nav {
       font-family: $secondary-font;
     }
     a:hover {
+      //noinspection SassScssResolvedByNameOnly
       border-bottom: $decolor 3px solid;
     }
     #nav-check {
       display: none;
     }
   }
+
+  //noinspection SassScssResolvedByNameOnly
   @media (max-width:600px) {
     .nav{
       .nav-btn {
         display: inline-block;
         position: absolute;
-        right: 0px;
-        top: 0px;
+        right: 0;
+        top: 0;
         padding-top: 20px;
         label {
           display: inline-block;
@@ -72,8 +78,8 @@ nav {
         transition: all 0.3s ease-in;
         overflow-y: hidden;
         top: 60px;
-        left: 0px;
-        right: 0px;
+        left: 0;
+        right: 0;
         a {
           display: block;
           width: 100%;
@@ -85,7 +91,7 @@ nav {
       z-index: +1;
     }
     .nav > #nav-check:not(:checked) ~ .nav-links {
-      height: 0px;
+      height: 0;
     }
     .nav > #nav-check:checked ~ .nav-links {
       height: max-content;
