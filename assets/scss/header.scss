@@ -433,6 +433,31 @@ header{
           }
         }
     }
+    table {
+        margin-top: 50px;
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #C072BB;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #7EC885;
+    }
+    #output p{
+        display: none;
+    }
+    #table{
+        padding: 0 100px;
+    }
+    input{
+        text-align: center;
+    }
 
     //Telework page//
     .container-telework{
@@ -658,6 +683,7 @@ header{
                 box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
                 text-align: center;
                 position: relative;
+                //noinspection SassScssResolvedByNameOnly
                 @include for-mobile{
                     backdrop-filter: none;
                     width: 317px;
