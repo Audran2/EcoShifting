@@ -1,7 +1,5 @@
-// noinspection JSUnusedGlobalSymbols,UnnecessaryLocalVariableJS,JSUnresolvedVariable,JSUnresolvedFunction
-
-let placeSearch, autocomplete;
-let componentForm = {
+var placeSearch, autocomplete;
+var componentForm = {
     street_number: 'short_name',
     route: 'long_name',
     locality: 'long_name',
@@ -32,19 +30,19 @@ function initAutocomplete() {
 
 function fillInAddress() {
     // Get the place details from the autocomplete object.
-    const place = autocomplete.getPlace();
+    var place = autocomplete.getPlace();
 
-    for (const component in componentForm) {
+    for (var component in componentForm) {
         document.getElementById(component).value = '';
         document.getElementById(component).disabled = false;
     }
 
     // Get each component of the address from the place details
     // and fill the corresponding field on the form.
-    for (let i = 0; i < place.address_components.length; i++) {
-        const addressType = place.address_components[i].types[0];
+    for (var i = 0; i < place.address_components.length; i++) {
+        var addressType = place.address_components[i].types[0];
         if (componentForm[addressType]) {
-            const val = place.address_components[i][componentForm[addressType]];
+            var val = place.address_components[i][componentForm[addressType]];
             document.getElementById(addressType).value = val;
         }
     }
@@ -55,11 +53,11 @@ function fillInAddress() {
 function geolocate() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-            const geolocation = {
+            var geolocation = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-            const circle = new google.maps.Circle({
+            var circle = new google.maps.Circle({
                 center: geolocation,
                 radius: position.coords.accuracy
             });
@@ -70,9 +68,9 @@ function geolocate() {
 
 // Create a function called calcDistance that will calculate the distance between two addresses and display the result in the output div
 function calculateDistance() {
-    const start = document.getElementById('input-start').value;
-    const end = document.getElementById('input-end').value;
-    const service = new google.maps.DistanceMatrixService();
+    var start = document.getElementById('input-start').value;
+    var end = document.getElementById('input-end').value;
+    var service = new google.maps.DistanceMatrixService();
     service.getDistanceMatrix({
         origins: [start],
         destinations: [end],
@@ -84,7 +82,7 @@ function calculateDistance() {
     // display the result in the output div
     function callback(response, status) {
         if (status === 'OK') {
-            const results = response.rows[0].elements;
+            var results = response.rows[0].elements;
             document.getElementById('output').innerHTML = results[0].distance.text;
             alert(results[0].distance.text)
         } else {
