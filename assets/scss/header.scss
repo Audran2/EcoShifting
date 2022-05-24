@@ -1,27 +1,43 @@
+
 header{
     margin: 0px 80px;
     @include for-mobile{
-        margin: 0px 15px;
+        margin: 0px 15px;   
     }
 
     //Home page//
     .container-home{
+        #nuage{
+            position: absolute;
+            top: 1400px;
+            right: 300px;
+            opacity: 0.9;
+        }
         // Animation nuage
         #scene{
+            
             div{
+                .cloud{
+                    animation: vent 4s ease infinite;
+                    position: absolute;  
+                }
+               
                 .deco1{
                     position: absolute;
                     top: 0;
+
+                    
+                    
+                    
                     @include for-mobile{
                         display: none;
                     }
                     
                 }
+                
                 .deco3{
                     top: -200px;
                     left: 360px;
-                    position: absolute;
-                    z-index: 1;
                     opacity: 0.9;
                     @include for-mobile{
                         display: none;
@@ -30,8 +46,6 @@ header{
                 .deco2{
                     top: -150px;
                     left: 1000px;
-                    position: absolute;
-                    z-index: 1;
                     opacity: 0.8;
                     @include for-mobile{
                         display: none;
@@ -41,8 +55,6 @@ header{
                 .deco4{
                     top: 150px;
                     left: 500px;
-                    position: absolute;
-                    z-index: 1;
                     opacity: 0.8;
                     @include for-mobile{
                         display: none;
@@ -52,14 +64,17 @@ header{
                 .deco5{
                     top: 60px;
                     left: 1300px;
-                    position: absolute;
-                    z-index: 1;
                     opacity: 0.8;
                     @include for-mobile{
                         display: none;
                     }
                 }
 
+            }
+            @keyframes vent {
+                0%{-webkit-transform: translateX(0);}
+                50% {-webkit-transform: translateX(15px);}
+                100%{-webkit-transform: translateX(0);}
             }
 
 
@@ -75,17 +90,19 @@ header{
             }
             p{
             text-align: center;
+            
             }
             .button{
                 margin: 5% auto;
                 width: 150px;
                 padding: 15px;
+                background-color: $decolor;
             }
 
         }
         a{
             img{
-                margin-left: 48%;
+                margin-left: 48.5%;
                 margin-top: 150px;
                 width: 50px;
                 height: 50px;
@@ -116,7 +133,6 @@ header{
 
         // 1 section
 
-
         .section-calculator{
             margin-top: 300px;
             margin-left: auto;
@@ -143,6 +159,8 @@ header{
                 .button{
                     margin-top: 10%;
                     width: 200px;
+                    margin-left: auto;
+                    margin-right: auto;
                     padding: 15px;
                 }
 
@@ -326,19 +344,68 @@ header{
 
         // section 3
         section{
-            margin: 250px auto;
+            margin: 250px 200px;
             @include for-mobile{
                 margin: 0 auto;
                 padding-top: 430px;
             }
-
-            h3{
+            .believe{
                 display: flex;
-                justify-content: center;
-                font-family: $primary-font;
-                font-size: 40px;
-                padding-bottom: 70px;
+                align-items: center;
+                justify-content: center;    
+                h3{
+                    display: flex;
+                    justify-content: center;
+                    font-family: $primary-font;
+                    font-size: 40px;
+                    padding-bottom: 70px;
+                }
+                .feuille{
+                    margin-top: -170px;
+                    width: 150px;
+                    @include for-mobile{
+                        display: none;
+                    }
+                }
+                #feuille1{
+                    margin-right: -40px;
+                    z-index: -1;
+                }
+                #feuille2{
+                    margin-left: -70px;
+                    z-index: -1;
+                }
             }
+            .believe2{
+                align-items: center;
+                justify-content: center;    
+                display: flex;
+                .feuille{
+                    width: 150px;
+                    margin-top: 100px;
+                    @include for-mobile{
+                        display: none;
+                    }
+                }
+                #feuille3{
+                    margin-right: -40px;
+                    z-index: -1;
+                }
+                #feuille4{
+                    margin-left: -40px;
+                    z-index: -1;
+                }
+                .button{
+                    margin: 3% auto;
+                    width: 250px;
+                    padding: 15px;
+                    @include for-mobile{
+                        margin-top: 50px;
+                    }
+                }
+                
+            }
+
             p{
                 text-align: justify;
             }
@@ -954,5 +1021,9 @@ header{
 
             }
         }
+
     }
+
 }
+
+

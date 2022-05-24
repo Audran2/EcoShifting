@@ -7,6 +7,16 @@ header {
     margin: 0px 15px;
   }
 }
+header .container-home #nuage {
+  position: absolute;
+  top: 1400px;
+  right: 300px;
+  opacity: 0.9;
+}
+header .container-home #scene div .cloud {
+  animation: vent 4s ease infinite;
+  position: absolute;
+}
 header .container-home #scene div .deco1 {
   position: absolute;
   top: 0;
@@ -19,8 +29,6 @@ header .container-home #scene div .deco1 {
 header .container-home #scene div .deco3 {
   top: -200px;
   left: 360px;
-  position: absolute;
-  z-index: 1;
   opacity: 0.9;
 }
 @media (max-width: 600px) {
@@ -31,8 +39,6 @@ header .container-home #scene div .deco3 {
 header .container-home #scene div .deco2 {
   top: -150px;
   left: 1000px;
-  position: absolute;
-  z-index: 1;
   opacity: 0.8;
 }
 @media (max-width: 600px) {
@@ -43,8 +49,6 @@ header .container-home #scene div .deco2 {
 header .container-home #scene div .deco4 {
   top: 150px;
   left: 500px;
-  position: absolute;
-  z-index: 1;
   opacity: 0.8;
 }
 @media (max-width: 600px) {
@@ -55,13 +59,22 @@ header .container-home #scene div .deco4 {
 header .container-home #scene div .deco5 {
   top: 60px;
   left: 1300px;
-  position: absolute;
-  z-index: 1;
   opacity: 0.8;
 }
 @media (max-width: 600px) {
   header .container-home #scene div .deco5 {
     display: none;
+  }
+}
+@keyframes vent {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(15px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
   }
 }
 header .container-home .container {
@@ -82,9 +95,10 @@ header .container-home .container .button {
   margin: 5% auto;
   width: 150px;
   padding: 15px;
+  background-color: #C072BB;
 }
 header .container-home a img {
-  margin-left: 48%;
+  margin-left: 48.5%;
   margin-top: 150px;
   width: 50px;
   height: 50px;
@@ -139,6 +153,8 @@ header .container-home .section-calculator .left p {
 header .container-home .section-calculator .left .button {
   margin-top: 10%;
   width: 200px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 15px;
 }
 @media (max-width: 600px) {
@@ -284,7 +300,7 @@ header .container-home .section-telework .left .slideshow-container .prev, heade
   position: absolute;
   top: 50%;
   padding: 16px;
-  color: white;
+  color: rgb(255, 255, 255);
   margin-top: -22px;
   font-weight: bold;
   font-size: 40px;
@@ -333,7 +349,7 @@ header .container-home .section-telework .left .slideshow-container .fade {
   }
 }
 header .container-home section {
-  margin: 250px auto;
+  margin: 250px 200px;
 }
 @media (max-width: 600px) {
   header .container-home section {
@@ -341,12 +357,66 @@ header .container-home section {
     padding-top: 430px;
   }
 }
-header .container-home section h3 {
+header .container-home section .believe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .container-home section .believe h3 {
   display: flex;
   justify-content: center;
   font-family: "Akshar", sans-serif;
   font-size: 40px;
   padding-bottom: 70px;
+}
+header .container-home section .believe .feuille {
+  margin-top: -170px;
+  width: 150px;
+}
+@media (max-width: 600px) {
+  header .container-home section .believe .feuille {
+    display: none;
+  }
+}
+header .container-home section .believe #feuille1 {
+  margin-right: -40px;
+  z-index: -1;
+}
+header .container-home section .believe #feuille2 {
+  margin-left: -70px;
+  z-index: -1;
+}
+header .container-home section .believe2 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+header .container-home section .believe2 .feuille {
+  width: 150px;
+  margin-top: 100px;
+}
+@media (max-width: 600px) {
+  header .container-home section .believe2 .feuille {
+    display: none;
+  }
+}
+header .container-home section .believe2 #feuille3 {
+  margin-right: -40px;
+  z-index: -1;
+}
+header .container-home section .believe2 #feuille4 {
+  margin-left: -40px;
+  z-index: -1;
+}
+header .container-home section .believe2 .button {
+  margin: 3% auto;
+  width: 250px;
+  padding: 15px;
+}
+@media (max-width: 600px) {
+  header .container-home section .believe2 .button {
+    margin-top: 50px;
+  }
 }
 header .container-home section p {
   text-align: justify;

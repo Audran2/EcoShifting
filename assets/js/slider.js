@@ -47,3 +47,59 @@ var parallaxInstance = new Parallax(scene, {
 });
 
 parallaxInstance.friction(0.2, 0.2);
+
+
+// animation sans librairie
+
+var feuille1 = document.getElementById('feuille1');
+var feuille2 = document.getElementById('feuille2');
+var feuille3 = document.getElementById('feuille3');
+var feuille4 = document.getElementById('feuille4');
+
+function mouvement(id,deg) {
+
+
+    id.style.transform = `translateY(${Y}px) translateX(${X}px) rotate(${deg}deg)`;
+}
+
+
+
+window.addEventListener("mousemove", function(e){
+  
+  X = -0.07*e.clientX;
+  Y = -0.03*e.clientY; 
+  mouvement(feuille1, -50)
+});
+
+window.addEventListener("mousemove", function(e){
+  
+  X = 0.07*e.clientX;
+  Y = -0.03*e.clientY; 
+  mouvement(feuille2, 40)
+});
+
+window.addEventListener("mousemove", function(e){
+  
+  X = -0.07*e.clientX;
+  Y = 0.03*e.clientY; 
+  mouvement(feuille3, -100)
+});
+
+window.addEventListener("mousemove", function(e){
+  
+  X = 0.07*e.clientX;
+  Y = 0.03*e.clientY; 
+  mouvement(feuille4, 100)
+});
+
+
+
+
+
+
+var imag = document.getElementsByClassName('thumbnail');
+new simpleParallax(imag, {
+	scale: 1.5
+});
+
+

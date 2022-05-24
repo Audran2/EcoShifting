@@ -67,5 +67,3 @@ form.addEventListener("submit", function (event) {
 		$('#contactus')[0].reset();
 	};
 });
-
-
