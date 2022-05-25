@@ -53,10 +53,10 @@ parallaxInstance.friction(0.2, 0.2);
 
 // animation without library
 
-const leaf1 = document.getElementById('leaf1');
-const leaf2 = document.getElementById('leaf2');
-const leaf3 = document.getElementById('leaf3');
-const leaf4 = document.getElementById('leaf4');
+const leaf1 = document.getElementById('leafOne');
+const leaf2 = document.getElementById('leafTwo');
+const leaf3 = document.getElementById('leafThree');
+const leaf4 = document.getElementById('leafFour');
 
 function movement(id,deg) {
 
