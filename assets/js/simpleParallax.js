@@ -1,3 +1,5 @@
+// noinspection JSFileReferences,JSUnusedAssignment,JSUnresolvedVariable,JSUnresolvedFunction,JSCheckFunctionSignatures
+
 import isSupportedBrowser from './helpers/isSupportedBrowser';
 import { viewport } from './helpers/viewport';
 import convertToArray from './helpers/convertToArray';
@@ -74,7 +76,7 @@ export default class SimpleParallax {
         viewport.setViewportTop(this.customContainer);
 
         if (this.lastPosition === viewport.positions.top) {
-            // if last position if the same than the curent one
+            // if last position is the same as the current one
             // callback the animationFrame and exit the current loop
             frameID = window.requestAnimationFrame(this.proceedRequestAnimationFrame);
 

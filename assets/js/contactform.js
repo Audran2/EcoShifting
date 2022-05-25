@@ -48,7 +48,7 @@ function validation(input, requiredMsg, invalidMsg, regex) {
 	// create a constant with the value of the input and compares it to the selected regex  
 	const dataInput = input.value.trim();
 	if (!regex.test(dataInput)) {
-		return error(input, invalidMsg);
+		return error(input, invalidMsg);		
 	}
 	return true;
 }
