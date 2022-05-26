@@ -44,12 +44,16 @@ const parallaxInstance = new Parallax(scene, {
 parallaxInstance.friction(0.2, 0.2);
 
 
-// animation without librairie
 
-var feuille1 = document.getElementById('feuille1');
-var feuille2 = document.getElementById('feuille2');
-var feuille3 = document.getElementById('feuille3');
-var feuille4 = document.getElementById('feuille4');
+
+// animation without library
+
+
+const leaf1 = document.getElementById('leafOne');
+const leaf2 = document.getElementById('leafTwo');
+const leaf3 = document.getElementById('leafThree');
+const leaf4 = document.getElementById('leafFour');
+
 
 
 function onMove(elementId, transform) {

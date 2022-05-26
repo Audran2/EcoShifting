@@ -105,7 +105,7 @@ body {
         overflow: hidden;
         background: transparent;
         border: $border;
-        border-radius: 5000px; 
+        border-radius: 5000px;
     }
 
     // style of the button before and after the mouse over
@@ -113,7 +113,7 @@ body {
     .button::after {
         position: absolute;
         content: '';
-        width: 25px;
+        width: 25   px;
         height: 25px;
         background: $decolor;
         top: 50%;
@@ -236,6 +236,7 @@ p{
     color: $colortext;
     font-size: 20px;
     font-family: $secondary-font;
+    text-align: center;
 }
 .teleworkco{
     display: flex;
@@ -246,21 +247,22 @@ p{
     h2{
       padding-top: 150px;
       padding-bottom: 50px;
-      text-align: center;
       @include for-mobile{
           text-align: center;
           padding-bottom: 20px;
       }
-      
+
     }
-    p{    
-      padding-bottom: 50px;
-      text-align: center;
+    p{
+        width: 900px;
+        @include for-mobile {
+            width: 100%;
+        }
     }
-    .button{
-      padding: 15px;
-      width: 200px;
+    .button {
+        margin: 5% auto 0;
+        width: 150px;
+        padding: 10px;
     }
-    
   }
 
