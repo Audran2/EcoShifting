@@ -1,5 +1,3 @@
-// noinspection JSUnusedGlobalSymbols,JSUnresolvedFunction
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -7,12 +5,7 @@ showSlides(slideIndex);
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
+    
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -36,7 +29,7 @@ function autoSlides() {
   slideauto++;
   if (slideauto > slides.length) {slideauto = 1}
   slides[slideauto-1].style.display = "block";
-  setTimeout(autoSlides, 5000); // Change image every 2 seconds
+  setTimeout(autoSlides, 5000); // Change image every 5 seconds
 }
 
 
@@ -51,57 +44,46 @@ const parallaxInstance = new Parallax(scene, {
 parallaxInstance.friction(0.2, 0.2);
 
 
-// animation sans librairie
+// animation without librairie
 
 var feuille1 = document.getElementById('feuille1');
 var feuille2 = document.getElementById('feuille2');
 var feuille3 = document.getElementById('feuille3');
 var feuille4 = document.getElementById('feuille4');
 
-function mouvement(id,deg) {
 
-
-    id.style.transform = `translateY(${Y}px) translateX(${X}px) rotate(${deg}deg)`;
+function onMove(elementId, transform) {
+  elementId.style.transform =transform;
 }
 
+function onMoveLeef(id,deg,transforms) {
 
+  const movementLeef =  `translateY(${transforms.translateY}px) translateX(${transforms.translateX}px) rotate(${deg}deg)`
+  onMove(id, movementLeef)
+}
 
-window.addEventListener("mousemove", function(e){
+function eventMouseMouveLeef(transforms,xMultiplier, yMultiplier, id, deg) {
+  const translateX = xMultiplier*transforms.translateX;
+  const translateY = yMultiplier*transforms.transformY;
+
+  onMoveLeef(id, deg,{translateX, translateY} )
+}
+
+function takeClientFromEvent(event){
+
+  const translateX = event.clientX;
+  const transformY = event.clientY;
+  return {translateX, transformY}
   
-  X = -0.07*e.clientX;
-  Y = -0.03*e.clientY; 
-  mouvement(feuille1, -50)
+}
+
+window.addEventListener("mousemove", function(event){ 
+ const transforms =  takeClientFromEvent(event) 
+eventMouseMouveLeef(transforms,-0.07, 0.03,feuille1, -50)
+eventMouseMouveLeef(transforms,0.07, 0.03,feuille2, 40)
+eventMouseMouveLeef(transforms,-0.07, -0.03,feuille3, -100)
+eventMouseMouveLeef(transforms,0.07, -0.03,feuille4, 100)
 });
 
-window.addEventListener("mousemove", function(e){
-  
-  X = 0.07*e.clientX;
-  Y = -0.03*e.clientY; 
-  mouvement(feuille2, 40)
-});
-
-window.addEventListener("mousemove", function(e){
-  
-  X = -0.07*e.clientX;
-  Y = 0.03*e.clientY; 
-  mouvement(feuille3, -100)
-});
-
-window.addEventListener("mousemove", function(e){
-  
-  X = 0.07*e.clientX;
-  Y = 0.03*e.clientY; 
-  mouvement(feuille4, 100)
-});
-
-
-
-
-
-
-var imag = document.getElementsByClassName('thumbnail');
-new simpleParallax(imag, {
-	scale: 1.5
-});
 
 
